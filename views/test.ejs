@@ -10,7 +10,16 @@
      <link rel="stylesheet" href="/stylesheets/act/main.css">
      <link rel="stylesheet" href="/stylesheets/act/bootstrap.min.css">
      <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
-    
+     <script>
+        $(document).ready(function(){
+            $(".dropdown").hover(function(){
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if(dropdownMenu.is(":visible")){
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });     
+        </script>
 
  </head>
  <body>
@@ -21,7 +30,7 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul><a href="/" id="logo">ACT JOURNAL</a>
-				<li class="current"><a href="/">首頁</a></li>
+				<li class="nav-link dropdown-toggle"><a href="/">首頁</a></li>
 				<li>
 					<a herf="/index">使用者</a>
 					<ul>
