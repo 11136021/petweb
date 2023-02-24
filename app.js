@@ -17,6 +17,7 @@ var lost_kan = require('./routes/lost_kan');
 var shopping_kan = require('./routes/shopping_kan');
 var cook_kan_rare = require('./routes/cook_kan_rare');
 var cooked_kan_deli = require('./routes/cooked_kan_deli');
+var test = require('./routes/test');//湘雲測試的畫面 勿動
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use('/lost_kan', lost_kan);
 app.use('/shopping_kan', shopping_kan);
 app.use('/cook_kan_rare', cook_kan_rare);
 app.use('/cooked_kan_deli', cooked_kan_deli);
+app.use('/test', test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
