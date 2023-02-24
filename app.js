@@ -16,6 +16,7 @@ var medical_kan = require('./routes/medical_kan');
 var lost_kan = require('./routes/lost_kan');
 var shopping_kan = require('./routes/shopping_kan');
 var cook_kan_rare = require('./routes/cook_kan_rare');
+var cooked_kan_deli = require('./routes/cooked_kan_deli');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/medical_kan', medical_kan);
 app.use('/lost_kan', lost_kan);
 app.use('/shopping_kan', shopping_kan);
 app.use('/cook_kan_rare', cook_kan_rare);
+app.use('/cooked_kan_deli', cooked_kan_deli);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
