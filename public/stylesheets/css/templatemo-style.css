@@ -155,13 +155,14 @@ a {
     text-decoration: none;
     transition: all 0.3s ease; 
 }
-a:hover { color:#A88E4F; }/*游標放上去時的字體顏色*/
+a:hover { color:#B8A067; }/*游標放上去時的字體顏色*/
+
 .container-fluid { 
     /*background: #000000;*/
     max-width: 1770px;
  }
 .nav{
-    background-color: #FFF2D3;
+    background-color: #FFF2D3; /*navber背景顏色*/
     width: 1770px;
 }
 
@@ -217,7 +218,7 @@ a:hover { color:#A88E4F; }/*游標放上去時的字體顏色*/
 .tm-mb-50 { margin-bottom: 50px; }
 .tm-mb-74 { margin-bottom: 74px; }
 .tm-mb-90 { margin-bottom: 90px; }
-.tm-text-primary { color: #A88E4F; }
+.tm-text-primary { color: #B8A067; }
 .tm-text-secondary { color: #CC6699; }
 a.tm-text-primary:hover { color:#666666; }
 .tm-bg-gray { background-color: #EEEEEE; }
@@ -229,11 +230,15 @@ a.tm-text-primary:hover { color:#666666; }
     text-align: center;
 }
 
-.nav-item { margin-right: 30px; }
-.nav-item:last-child { margin-right: 0; }
+
+
+.nav-item {
+    margin-left:20px; }
+.nav-item:last-child { margin-left:5; }
+
 
 .nav-link {
-    color: #DEC893;
+    color: #DEC893; /*navbar logo 顏色*/
     border-bottom: 4px solid transparent;
     font-size: 1.2rem;
 }
