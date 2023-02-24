@@ -3,15 +3,24 @@
 <head>
 <meta charset="utf-8">
 <title>Activate Bootstrap Dropdown with Hover</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/css/all.min.css">
+<link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
 <style>
     .dropdown:hover .dropdown-menu{
         display: block;
     }
     .dropdown-menu{
         margin-top: 0;
+        background-color: #DBC89B;
+    }
+    .dropdown-item{
+        background-color: #DBC89B;
+        color: #FFFEFB;
+    }
+    .collapse {
+        color: #080808;
     }
 </style>
 <script>
@@ -25,12 +34,17 @@ $(document).ready(function(){
 });     
 </script>
 </head>
-<body>
+<div class="nav">
+    <a class="navbar-brand" href="/">
+        <i class="fas fa-film mr-2"></i>
+        Pet伴，陪伴
+    </a>
+    
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Messages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">登入</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item">Inbox</a>
                         <a href="#" class="dropdown-item">Sent</a>
@@ -40,5 +54,8 @@ $(document).ready(function(){
             </div>
         </div>
     </nav>
-</body>
+<body>
+    <!--游標清單外掛-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 </html>
