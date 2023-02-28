@@ -21,6 +21,8 @@ var medical_kan_med_skin = require('./routes/medical_kan_med_skin');
 var medical_kan_med_organ = require('./routes/medical_kan_med_organ');
 var medical_kan_mouth = require('./routes/medical_kan_mouth');
 var medical_kan_med_limb = require('./routes/medical_kan_med_limb');
+var lost_lookfor = require('./routes/lost_lookfor');
+var lost_picked = require('./routes/lost_picked');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 
 var app = express();
@@ -52,6 +54,8 @@ app.use('/medical_kan_med_skin', medical_kan_med_skin);
 app.use('/medical_kan_med_organ', medical_kan_med_organ);
 app.use('/medical_kan_mouth', medical_kan_mouth);
 app.use('/medical_kan_med_limb', medical_kan_med_limb);
+app.use('/lost_lookfor', lost_lookfor);
+app.use('/lost_picked', lost_picked);
 app.use('/test', test);
 
 // catch 404 and forward to error handler
