@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/css/all.min.css">
     <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
+    <!-- navbar 下拉選單樣式-->
+    <style>
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-menu{
+            margin-top: 0;
+            background-color: #DBC89B;
+        }
+        .dropdown-item{
+            background-color: #DBC89B;
+            color: #FFFEFB;
+        }
+        .collapse {
+            color: #A88E4F;
+        }
     
+    </style>
 
 </head>
 <body>
@@ -28,10 +45,22 @@
                 <i class="fas fa-film mr-2"></i>
                 Pet伴，陪伴
             </a>
-           
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="/user_login" class="nav-link" data-toggle="dropdown">登入</a> 
+                        </div>
+                        <div class="nav-item dropdown"></div>
+                            <a href="/user_add_form" class="nav-link" data-toggle="dropdown">註冊</a>
+                        </div>    
+                       
+                    </div>
+                </div>
+            </nav>
+
+
+       
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -195,5 +224,16 @@
             $('body').addClass('loaded');
         });
     </script>
+    <!--navbar 下拉選單外掛-->
+    <script>
+        $(document).ready(function(){
+            $(".dropdown").hover(function(){
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if(dropdownMenu.is(":visible")){
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });     
+        </script>
 </body>
 </html>
