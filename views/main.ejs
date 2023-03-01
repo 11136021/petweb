@@ -60,7 +60,11 @@
              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link " data-bs-toggle="page" href="main" role="button" aria-expanded="false">主頁</a>
+                    <a class="nav-link" data-bs-toggle="dropdown" href="main" role="button" aria-expanded="false">主頁</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="new_article">新增文章、貼文</a></li>
+                      <li><a class="dropdown-item" href="art_edit">文章編輯</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" data-bs-toggle="dropdown" href="cook_kan" role="button" aria-expanded="false">食譜</a>
@@ -72,33 +76,34 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link" data-bs-toggle="dropdown" href="medical_kan" role="button" aria-expanded="false">醫療</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="medical_kan_med _skin">皮膚</a></li>
-                      <li><a class="dropdown-item" href="#">內科</a></li>
-                      <li><a class="dropdown-item" href="#">口腔</a></li>
-                      <li><a class="dropdown-item" href="#">四肢</a></li>
+                      <li><a class="dropdown-item" href="medical_kan_med_skin">皮膚</a></li>
+                      <li><a class="dropdown-item" href="medical_kan_med_organ">內科</a></li>
+                      <li><a class="dropdown-item" href="medical_kan_mouth">口腔</a></li>
+                      <li><a class="dropdown-item" href="medical_kan_med_limb">四肢</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" data-bs-toggle="dropdown" href="lost_kan" role="button" aria-expanded="false">走失</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">拾獲</a></li>
-                      <li><a class="dropdown-item" href="#">協尋</a></li>
+                      <li><a class="dropdown-item" href="lost_picked">拾獲</a></li>
+                      <li><a class="dropdown-item" href="lost_lookfor">協尋</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">旅遊</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">餐廳</a></li>
-                      <li><a class="dropdown-item" href="#">住宿</a></li>
-                      <li><a class="dropdown-item" href="#">一日遊行程</a></li>
+                      <li><a class="dropdown-item" href="tra_restaurant">餐廳</a></li>
+                      <li><a class="dropdown-item" href="tra_hotal">住宿</a></li>
+                      <li><a class="dropdown-item" href="tra_day">一日遊行程</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">個人檔案</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">我的個人檔案</a></li>
-                      <li><a class="dropdown-item" href="#">編輯個人檔案</a></li>
-                      <li><a class="dropdown-item" href="#">登出</a></li>
+                      <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
+                      <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
+                      <li><a class="dropdown-item" href="pro_newpw">重設密碼</a></li>
+                      <li><a class="dropdown-item" href="user_logout">登出</a></li>
                     </ul>
                   </li>
 
