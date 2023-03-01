@@ -8,13 +8,35 @@
      <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
      <link rel="stylesheet" href="/stylesheets/css/all.min.css">
      <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
- <!--
-     m
- TemplateMo 556 Catalog-Z
+
+     <style>
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-menu{
+            margin-top: 0;
+            background-color: #DBC89B;
+        }
+        .dropdown-item{
+            background-color: #DBC89B;
+            color: #FFFEFB;
+        }
+        .collapse {
+            color: #A88E4F;
+        }
+    
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".dropdown").hover(function(){
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if(dropdownMenu.is(":visible")){
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });     
+        </script>
  
- https://templatemo.com/tm-556-catalog-z
- 
- -->
  </head>
  <body>
      <!-- Page Loader -->
@@ -80,58 +102,6 @@
                     </ul>
                   </li>
 
-             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                 <li class="nav-item">
-                     <a class="nav-link nav-link-1 active" aria-current="page" href="/main">主頁</a>
-                        
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/cook_kan">食譜</a>
-                     
-                        <ul>
-                            <li><a href="/">生食</a></li> 
-                            <li><a href="/">熟食</a></li>
-                        </ul>
-                   
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link nav-link-3" href="/medical_kan">醫療</a>
-                        <ul>
-                            <li><a href="/">皮膚</a></li> 
-                            <li><a href="/">內科</a></li>
-                            <li><a href="/">口腔</a></li>
-                            <li><a href="/">四肢</a></li>
-                        </ul>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link nav-link-4" href="lost_kan">走失</a>
-                        <ul>
-                            <li><a href="/">拾獲</a></li> 
-                            <li><a href="/">協尋</a></li>
-                        </ul>
-                 </li>
-                 <!--<li class="nav-item">
-                     <a class="nav-link nav-link-2" href="＃">揪團購</a>  揪團購先刪掉
-                 </li>-->
-                 <li class="nav-item">
-                     <a class="nav-link nav-link-3" href="＃">旅遊</a>
-                     <ul>
-                        <li><a href="/">餐廳</a></li> 
-                        <li><a href="/">住宿</a></li>
-                        <li><a href="/">一日遊行程</a></li>
-                    </ul>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link nav-link-4" href="＃">個人檔案</a><!-- 改 （放人頭圖片）-->
-                        <ul>
-                            <li><a href="/">我的個人檔案</a></li> 
-                            <li><a href="/">編輯個人檔案</a></li>
-                            <li><a href="/">登出</a></li>
-                        </ul>
-                 </li>
-                 
-             </ul>
-             
             </div>
          </div>
      </nav>
