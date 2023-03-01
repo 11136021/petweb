@@ -33,6 +33,7 @@ var art_edit = require('./routes/art_edit');
 var new_article = require('./routes/new_article');
 var about_us = require('./routes/about_us');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
+var test2 = require('./routes/test2');//湘雲測試的畫面 勿動
 
 var app = express();
 
@@ -75,6 +76,7 @@ app.use('/art_edit', art_edit);
 app.use('/new_article', new_article);
 app.use('/about_us', about_us);
 app.use('/test', test);
+app.use('/test2', test2);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
