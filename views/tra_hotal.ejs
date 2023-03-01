@@ -1,88 +1,259 @@
  <!-- 旅遊版住宿-->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
-     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/all.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
- <!--
-     m
- TemplateMo 556 Catalog-Z
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
+      <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/stylesheets/css/all.min.css">
+      <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
  
- https://templatemo.com/tm-556-catalog-z
- 
- -->
- </head>
- <body>
-     <!-- Page Loader -->
-     <div id="loader-wrapper">
-         <div id="loader"></div>
- 
-         <div class="loader-section section-left"></div>
-         <div class="loader-section section-right"></div>
- 
-     </div>
-
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/main">
-                <i class="fas fa-film mr-2"></i>
-                Pet伴，陪伴
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                <li class="nav-item"> 
-                    <a class="nav-link nav-link-1"  href="/main">主頁</a> <!--aria-current="page"-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2 active" href="/cook_kan">食譜</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="/medical_kan">醫療</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="/lost_kan">走失</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/shopping_kan">揪團購</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="＃">旅遊</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="＃">個人檔案</a><!-- 改 （放人頭圖片）-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="/user_logout">登出</a><!-- 改 （放人頭圖片）-->
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- 搜尋的地方
-    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
-        <form class="d-flex tm-search-form">
-            <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success tm-search-btn" type="submit">
-                <i class="fas fa-search"></i> 
-            </button>
-        </form>
-    </div>-->
-
-    <!-- loading轉圈的畫面-->
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-     <script src="/javascript/js/plugins.js"></script>
+      <style>
+         .dropdown:hover .dropdown-menu{
+             display: block;
+         }
+         .dropdown-menu{
+             margin-top: 0;
+             background-color: #DBC89B;
+         }
+         .dropdown-item{
+             background-color: #DBC89B;
+             color: #FFFEFB;
+         }
+         .collapse {
+             color: #A88E4F;
+         }
+     
+     </style>
      <script>
-        $(window).on("load", function() {
-            $('body').addClass('loaded');
-        });
-    </script>
+         $(document).ready(function(){
+             $(".dropdown").hover(function(){
+                 var dropdownMenu = $(this).children(".dropdown-menu");
+                 if(dropdownMenu.is(":visible")){
+                     dropdownMenu.parent().toggleClass("open");
+                 }
+             });
+         });     
+         </script>
+  
+  </head>
+  <body>
+      <!-- Page Loader -->
+      <div id="loader-wrapper">
+          <div id="loader"></div>
+  
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+  
+      </div>
+      <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+             <div class="nav">
+              <a class="navbar-brand" href="/main">
+                  <i class="fas fa-film mr-2"></i>
+                 Pet伴，陪伴
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-bs-toggle="dropdown" href="main" role="button" aria-expanded="false">主頁</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="new_article">新增文章、貼文</a></li>
+                      <li><a class="dropdown-item" href="art_edit">文章編輯</a></li>
+                    </ul>
+                  </li>
+                 
+                   <li class="nav-item dropdown">
+                     <a class="nav-link" data-bs-toggle="dropdown" href="cook_kan" role="button" aria-expanded="false">食譜</a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="cook_kan_rare">生食</a></li>
+                       <li><a class="dropdown-item" href="cook_kan_cooked">熟食</a></li>
+                     </ul>
+                   </li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link" data-bs-toggle="dropdown" href="medical_kan" role="button" aria-expanded="false">醫療</a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="medical_kan_med_skin">皮膚</a></li>
+                       <li><a class="dropdown-item" href="medical_kan_med_organ">內科</a></li>
+                       <li><a class="dropdown-item" href="medical_kan_mouth">口腔</a></li>
+                       <li><a class="dropdown-item" href="medical_kan_med_limb">四肢</a></li>
+                     </ul>
+                   </li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link" data-bs-toggle="dropdown" href="lost_kan" role="button" aria-expanded="false">走失</a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="lost_picked">拾獲</a></li>
+                       <li><a class="dropdown-item" href="lost_lookfor">協尋</a></li>
+                     </ul>
+                   </li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">旅遊</a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="tra_restaurant">餐廳</a></li>
+                       <li><a class="dropdown-item" href="tra_hotal">住宿</a></li>
+                       <li><a class="dropdown-item" href="tra_day">一日遊行程</a></li>
+                     </ul>
+                   </li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">個人檔案</a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
+                       <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
+                       <li><a class="dropdown-item" href="pro_newpw">重設密碼</a></li>
+                       <li><a class="dropdown-item" href="user_logout">登出</a></li>
+                     </ul>
+                   </li>
+ 
+             </div>
+          </div>
+      </nav>
+  
+      <!-- 搜尋的地方 -->
+    <!-- <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+         <form class="d-flex tm-search-form">
+             <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success tm-search-btn" type="submit">
+                 <i class="fas fa-search"></i>  
+             </button>
+         </form>
+     </div>-->
+ 
+     <!DOCTYPE html>
+     <body>
+     <img src="img/img-22.jpg"style="display:block; margin:auto;" width="1400" height="750" />
+     </body>
+ 
+ </html>
+ 
+      <div class="container-fluid tm-container-content tm-mt-60">
+          <div class="row mb-4">
+              <h2 class="col-6 tm-text-primary">
+                  看板內容
+              </h2>
+             <!-- <div class="col-6 d-flex justify-content-end align-items-center">
+                  <form action="" class="tm-text-primary">
+                      Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 200
+                  </form>
+              </div>-->
+          </div>
+          <div class="row tm-mb-90 tm-gallery">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                  <figure class="effect-ming tm-video-item">
+                      <img src="img/img-17.jpg" alt="Image" class="img-fluid">
+                      <figcaption class="d-flex align-items-center justify-content-center">
+                          <h2>食譜</h2>
+                          <a href="/cook_kan">View more</a> <!-- 不知道 View more在哪裏-->
+                      </figcaption>                    
+                  </figure>
+                  <!-- <div class="d-flex justify-content-between tm-text-gray">
+                     <span class="tm-text-gray-light">18 Oct 2020</span>
+                      <span>16,100 views</span>
+                  </div>-->
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                  <figure class="effect-ming tm-video-item">
+                      <img src="img/img-18.jpg" alt="Image" class="img-fluid">
+                      <figcaption class="d-flex align-items-center justify-content-center">
+                          <h2>醫療</h2>
+                          <a href="/medical_kan">View more</a> <!-- 不知道 View more在哪裏-->
+                      </figcaption>                    
+                  </figure>
+                  <!--<div class="d-flex justify-content-between tm-text-gray">
+                      <span class="tm-text-gray-light">14 Oct 2020</span>
+                      <span>16,100 views</span>
+                  </div>-->
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                  <figure class="effect-ming tm-video-item">
+                      <img src="img/img-19.jpg" alt="Image" class="img-fluid">
+                      <figcaption class="d-flex align-items-center justify-content-center">
+                          <h2>走失</h2>
+                          <a href="/lost_kan">View more</a> <!-- 不知道 View more在哪裏-->
+                      </figcaption>                    
+                  </figure>
+                  <!--<div class="d-flex justify-content-between tm-text-gray">
+                      <span class="tm-text-gray-light">12 Oct 2020</span>
+                      <span>12,460 views</span>
+                  </div>-->
+              </div>
+              
+              
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                  <figure class="effect-ming tm-video-item">
+                      <img src="img/img-21.jpg" alt="Image" class="img-fluid">
+                      <figcaption class="d-flex align-items-center justify-content-center">
+                          <h2>旅遊</h2>
+                          <a href="/travel_kan">View more</a> <!-- 不知道 View more在哪裏-->
+                      </figcaption>                    
+                  </figure>
+                   <!--<div class="d-flex justify-content-between tm-text-gray">
+                      <span class="tm-text-gray-light">24 Sep 2020</span>
+                      <span>16,008 views</span>
+                  </div>-->
+              </div>  
+       </div> <!-- row -->
+         <!-- <div class="row tm-mb-90">
+              <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
+                  <a href="#" class="btn btn-primary tm-btn-prev mb-2 disabled">Previous</a>
+                  <div class="tm-paging d-flex">
+                      <a href="#" class="active tm-paging-link">1</a>
+                      <a href="#" class="tm-paging-link">2</a>
+                      <a href="#" class="tm-paging-link">3</a>
+                      <a href="#" class="tm-paging-link">4</a>
+                  </div>
+                  <a href="javascript:void(0);" class="btn btn-primary tm-btn-next">Next Page</a>
+              </div>            
+          </div>
+      </div>--> <!-- container-fluid, tm-container-content -->
+  
+      <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+          <div class="container-fluid tm-container-small">
+              <div class="row">
+                  <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                      <h3 class="tm-text-primary mb-4 tm-footer-title">關於我們</h3>
+                      <p>Catalog-Z is free <a rel="sponsored" href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2 HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end integration with any kind of CMS website.</p>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                      <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
+                      <ul class="tm-footer-links pl-0">
+                          <li><a href="#">Advertise</a></li>
+                          <li><a href="#">Support</a></li>
+                          <li><a href="#">Our Company</a></li>
+                          <li><a href="#">Contact</a></li> <!-- 可修改 -->
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                      <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
+                          <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                          <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                          <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                          <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li> <!-- 可修改 -->
+                      </ul>
+                      <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
+                      <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a> <!-- 可修改 -->
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                      Copyright 2020 Catalog-Z Company. All rights reserved.
+                  </div> <!-- 可修改 -->
+                  <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                      Designed by <a href="＃" class="tm-text-gray" rel="sponsored" target="_parent">TemplateMo</a>
+                  </div> <!-- 可修改 -->
+              </div>
+          </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+      <script src="/javascript/js/plugins.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script>
+          $(window).on("load", function() {
+              $('body').addClass('loaded');
+          });
+      </script>
+  </body>
+  </html>
