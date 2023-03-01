@@ -31,6 +31,7 @@ var pro_edit = require('./routes/pro_edit');
 var pro_newpw = require('./routes/pro_newpw');
 var art_edit = require('./routes/art_edit');
 var new_article = require('./routes/new_article');
+var about_us = require('./routes/about_us');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 
 var app = express();
@@ -72,6 +73,7 @@ app.use('/pro_edit', pro_edit);
 app.use('/pro_newpw', pro_newpw);
 app.use('/art_edit', art_edit);
 app.use('/new_article', new_article);
+app.use('/about_us', about_us);
 app.use('/test', test);
 
 // catch 404 and forward to error handler
