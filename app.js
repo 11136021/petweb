@@ -16,7 +16,21 @@ var medical_kan = require('./routes/medical_kan');
 var lost_kan = require('./routes/lost_kan');
 var shopping_kan = require('./routes/shopping_kan');
 var cook_kan_rare = require('./routes/cook_kan_rare');
-var cooked_kan_deli = require('./routes/cooked_kan_deli');
+var cook_kan_cooked = require('./routes/cook_kan_cooked');
+var medical_kan_med_skin = require('./routes/medical_kan_med_skin');
+var medical_kan_med_organ = require('./routes/medical_kan_med_organ');
+var medical_kan_mouth = require('./routes/medical_kan_mouth');
+var medical_kan_med_limb = require('./routes/medical_kan_med_limb');
+var lost_lookfor = require('./routes/lost_lookfor');
+var lost_picked = require('./routes/lost_picked');
+var tra_day = require('./routes/tra_day');
+var tra_hotal = require('./routes/tra_hotal');
+var tra_restaurant = require('./routes/tra_restaurant');
+var profile = require('./routes/profile');
+var pro_edit = require('./routes/pro_edit');
+var pro_newpw = require('./routes/pro_newpw');
+var art_edit = require('./routes/art_edit');
+var new_article = require('./routes/new_article');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 
 var app = express();
@@ -43,7 +57,21 @@ app.use('/medical_kan', medical_kan);
 app.use('/lost_kan', lost_kan);
 app.use('/shopping_kan', shopping_kan);
 app.use('/cook_kan_rare', cook_kan_rare);
-app.use('/cooked_kan_deli', cooked_kan_deli);
+app.use('/cook_kan_cooked', cook_kan_cooked);
+app.use('/medical_kan_med_skin', medical_kan_med_skin);
+app.use('/medical_kan_med_organ', medical_kan_med_organ);
+app.use('/medical_kan_mouth', medical_kan_mouth);
+app.use('/medical_kan_med_limb', medical_kan_med_limb);
+app.use('/lost_lookfor', lost_lookfor);
+app.use('/lost_picked', lost_picked);
+app.use('/tra_day', tra_day);
+app.use('/tra_hotal', tra_hotal);
+app.use('/tra_restaurant', tra_restaurant);
+app.use('/profile', profile);
+app.use('/pro_edit', pro_edit);
+app.use('/pro_newpw', pro_newpw);
+app.use('/art_edit', art_edit);
+app.use('/new_article', new_article);
 app.use('/test', test);
 
 // catch 404 and forward to error handler
