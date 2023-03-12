@@ -23,15 +23,17 @@ a,a:hover {
 section {
 	margin-bottom:20px;
 }
+
 .section-title h2 {
-	border-bottom:1px solid rgba(0,0,0,.15);
+	border-bottom:1px solid #B8A067;/* 小小底線後的整條底線 #A88E4F*/
+	color:#A88E4F;
 	margin-bottom:25px;
 	font-weight:700;
 	font-size:1.4rem;
 	margin-bottom:27px;
 }
-.section-title span {
-	border-bottom:1px solid rgba(0,0,0,.44);
+.section-title span {/* 小小底線*/
+	border-bottom:1px solid #B8A067; 
 	display:inline-block;
 	padding-bottom:20px;
 	margin-bottom:-1px;
@@ -48,6 +50,9 @@ section {
 		padding-right:.7rem;
 		padding-left:.7rem;
 	}
+}
+.lead{
+	color:#A88E4F;
 }
 .card-columns .card {
 	margin-bottom:20px;
@@ -200,6 +205,7 @@ span.post-name a,span.post-read-more a:hover {
 }
 .mainheading h1.sitetitle {
 	font-family:Righteous;
+	color:#A88E4F;
 }
 .mainheading h1.posttitle {
 	font-weight:700;
