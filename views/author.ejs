@@ -1,0 +1,156 @@
+ <!-- 查看他人個人檔案-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="utf-8">
+ 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
+ 
+ <!-- Bootstrap core CSS 內文的css連結 (外匡？)-->
+ <link rel="stylesheet" href="/stylesheets/assets/bootstrap.min.css">
+ <!-- Fonts -->
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+ <!-- Custom styles for this template內文的css連結(外匡？) -->
+ <link rel="stylesheet" href="/stylesheets/assets/mediumish.css" >
+ <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+ <link rel="stylesheet" href="/stylesheets/css/all.min.css">
+ <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
+ <!-- 下拉選單外掛 -->
+ <style>
+     .dropdown:hover .dropdown-menu{
+         display: block;
+     }
+     .dropdown-menu{
+         margin-top: 0;
+         background-color: #DBC89B;
+     }
+     .dropdown-item{
+         background-color: #DBC89B;
+         color: #FFFEFB;
+     }
+     .collapse {
+         color: #A88E4F;
+     }
+ 
+ </style>
+ <script>
+     $(document).ready(function(){
+         $(".dropdown").hover(function(){
+             var dropdownMenu = $(this).children(".dropdown-menu");
+             if(dropdownMenu.is(":visible")){
+                 dropdownMenu.parent().toggleClass("open");
+             }
+         });
+     });     
+     </script>
+ 
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-lg">
+     <div class="container-fluid">
+        <div class="nav">
+         <a class="navbar-brand" href="/main">
+             <i class="fas fa-film mr-2"></i>
+            Pet伴，陪伴
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <i class="fas fa-bars"></i>
+         </button>
+         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+ 
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="main" role="button" aria-expanded="false">主頁</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="new_article">新增文章、貼文</a></li>
+                  <li><a class="dropdown-item" href="art_edit">文章編輯</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="cook_kan" role="button" aria-expanded="false">食譜</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cook_kan_rare">生食</a></li>
+                  <li><a class="dropdown-item" href="cook_kan_cooked">熟食</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="medical_kan" role="button" aria-expanded="false">醫療</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="medical_kan_med_skin">皮膚</a></li>
+                  <li><a class="dropdown-item" href="medical_kan_med_organ">內科</a></li>
+                  <li><a class="dropdown-item" href="medical_kan_mouth">口腔</a></li>
+                  <li><a class="dropdown-item" href="medical_kan_med_limb">四肢</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="lost_kan" role="button" aria-expanded="false">走失</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="lost_picked">拾獲</a></li>
+                  <li><a class="dropdown-item" href="lost_lookfor">協尋</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">旅遊</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tra_restaurant">餐廳</a></li>
+                  <li><a class="dropdown-item" href="tra_hotal">住宿</a></li>
+                  <li><a class="dropdown-item" href="tra_day">一日遊行程</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">個人檔案</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
+                  <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
+                  <li><a class="dropdown-item" href="pro_newpw">重設密碼</a></li>
+                  <li><a class="dropdown-item" href="user_logout">登出</a></li>
+                </ul>
+              </li>
+ <!--搜尋按鈕
+             <form class="form-inline my-2 my-lg-0">
+                         <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                         <span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+                     </form>-->
+        </div>
+     </div>
+ </nav>
+ 
+ </head>
+ 
+ 
+ 
+       
+     <!-- Begin Footer
+     ================================================== -->
+     <div class="footer">
+         <p class="pull-left">
+             Designed by &copy; Pet伴，陪伴
+         </p>
+         
+         <div class="clearfix">
+         </div>
+     </div>
+     <!-- End Footer
+     ================================================== -->
+ 
+ </div>
+ <!-- /.container -->
+ 
+ <!-- Bootstrap core JavaScript
+     ================================================== -->
+ <!-- Placed at the end of the document so the pages load faster -->
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+ <script src="assets/js/bootstrap.min.js"></script>
+ <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+ <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+ <script src="/javascript/js/plugins.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script>
+         $(window).on("load", function() {
+             $('body').addClass('loaded');
+         });
+     </script>
+ </body>
+ </html>
+ 
