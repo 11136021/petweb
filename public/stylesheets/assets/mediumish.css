@@ -25,15 +25,15 @@ section {
 }
 
 .section-title h2 {
-	border-bottom:1px solid #B8A067;/* 小小底線後的整條底線 #A88E4F*/
-	color:#A88E4F;
+	border-bottom:1px solid #3B2D0C;/* 小小底線後的整條底線 #A88E4F*/
+	color:#3B2D0C;
 	margin-bottom:25px;
 	font-weight:700;
 	font-size:1.4rem;
 	margin-bottom:27px;
 }
 .section-title span {/* 小小底線*/
-	border-bottom:1px solid #B8A067; 
+	border-bottom:1px solid #3B2D0C; 
 	display:inline-block;
 	padding-bottom:20px;
 	margin-bottom:-1px;
@@ -52,7 +52,7 @@ section {
 	}
 }
 .lead{
-	color:#A88E4F;
+	color:#A2967A;
 }
 .card-columns .card {
 	margin-bottom:20px;
@@ -85,14 +85,14 @@ section {
 	line-height: 1.25;
 }
 .listfeaturedtag h2.card-title a,.listrecent h2.card-title a {
-	color:rgba(0,0,0,.8);
+	color:#776D54;
 }
 .listfeaturedtag h2.card-title a:hover,.listrecent h2.card-title a:hover {
 	color:rgba(0,0,0,.6);
 	text-decoration:none;
 }
 .listfeaturedtag h4.card-text,.listrecent h4.card-text {
-	color:rgba(0,0,0,.44);
+	color:#A2967A;
 	font-size:0.95rem;
 	line-height:1.4;
 	font-weight:400;
@@ -205,7 +205,7 @@ span.post-name a,span.post-read-more a:hover {
 }
 .mainheading h1.sitetitle {
 	font-family:Righteous;
-	color:#A88E4F;
+	color:#4B3E1D;
 }
 .mainheading h1.posttitle {
 	font-weight:700;
