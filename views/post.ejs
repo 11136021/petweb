@@ -49,32 +49,92 @@
     </script>
 
 </head>
+<!-- navbar-->
+<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid">
+	   <div class="nav">
+		<a class="navbar-brand" href="/main">
+			<i class="fas fa-film mr-2"></i>
+		   Pet伴，陪伴
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+		   <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="main" role="button" aria-expanded="false">主頁</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="new_article">新增文章、貼文</a></li>
+				 <li><a class="dropdown-item" href="art_edit">文章編輯</a></li>
+			   </ul>
+			 </li>
+			 <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="cook_kan" role="button" aria-expanded="false">食譜</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="cook_kan_rare">生食</a></li>
+				 <li><a class="dropdown-item" href="cook_kan_cooked">熟食</a></li>
+			   </ul>
+			 </li>
+			 <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="medical_kan" role="button" aria-expanded="false">醫療</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="medical_kan_med_skin">皮膚</a></li>
+				 <li><a class="dropdown-item" href="medical_kan_med_organ">內科</a></li>
+				 <li><a class="dropdown-item" href="medical_kan_mouth">口腔</a></li>
+				 <li><a class="dropdown-item" href="medical_kan_med_limb">四肢</a></li>
+			   </ul>
+			 </li>
+			 <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="lost_kan" role="button" aria-expanded="false">走失</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="lost_picked">拾獲</a></li>
+				 <li><a class="dropdown-item" href="lost_lookfor">協尋</a></li>
+			   </ul>
+			 </li>
+			 <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">旅遊</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="tra_restaurant">餐廳</a></li>
+				 <li><a class="dropdown-item" href="tra_hotal">住宿</a></li>
+				 <li><a class="dropdown-item" href="tra_day">一日遊行程</a></li>
+			   </ul>
+			 </li>
+			 <li class="nav-item dropdown">
+			   <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">個人檔案</a>
+			   <ul class="dropdown-menu">
+				 <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
+				 <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
+				 <li><a class="dropdown-item" href="pro_newpw">重設密碼</a></li>
+				 <li><a class="dropdown-item" href="user_logout">登出</a></li>
+			   </ul>
+			 </li>
+
+	   </div>
+	</div>
+	<!-- <div class="container">
+		logo圖片放置
+		<a class="navbar-brand" href="index">
+		<img src="img/logo.png" alt="logo"> logo圖片放置
+		</a>-->
+		<!-- End Logo 
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+			<!-- Begin Menu -->
+			
+			<!-- End Menu -->
+			<!-- Begin Search 搜尋按鈕
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search">
+				<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+			</form>-->
+			<!-- End Search -->
+		</div>
+	</div>
+</nav>
+<!-- navbar END -->
 <body>
 
-<!-- Begin Nav
-================================================== -->
-<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="container">
-	<!-- logo圖片放置-->
-	<a class="navbar-brand" href="index">
-	<img src="img/logo.png" alt="logo"><!-- logo圖片放置-->
-	</a>
-	<!-- End Logo -->
-	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		<!-- Begin Menu -->
-		
-		<!-- End Menu -->
-		<!-- Begin Search 搜尋按鈕-->
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
-		</form>
-		<!-- End Search -->
-	</div>
-</div>
+
 </nav>
 <!-- End Nav
 ================================================== -->
@@ -272,11 +332,6 @@
 <!-- End Related Posts
 ================================================== -->
 
-<!-- Begin Twitter Timeline
-================================================== -->
-<div class="container margtop3rem">
-<a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776">WowThemesNet Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
 
 
 <!-- Begin AlertBar
@@ -289,8 +344,7 @@
 <!-- End AlertBar
 ================================================== -->
 
-<!-- Begin Footer
-================================================== -->
+<!-- Begin Footer-->
 <div class="container">
 	<div class="footer">
 		<p class="pull-left">
@@ -301,8 +355,7 @@
 		</div>
 	</div>
 </div>
-<!-- End Footer
-================================================== -->
+<!-- End Footer -->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

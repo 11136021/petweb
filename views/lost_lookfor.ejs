@@ -2,41 +2,50 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
-     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/all.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
-
-     <style>
-        .dropdown:hover .dropdown-menu{
-            display: block;
-        }
-        .dropdown-menu{
-            margin-top: 0;
-            background-color: #DBC89B;
-        }
-        .dropdown-item{
-            background-color: #DBC89B;
-            color: #FFFEFB;
-        }
-        .collapse {
-            color: #A88E4F;
-        }
-    
-    </style>
-    <script>
-        $(document).ready(function(){
-            $(".dropdown").hover(function(){
-                var dropdownMenu = $(this).children(".dropdown-menu");
-                if(dropdownMenu.is(":visible")){
-                    dropdownMenu.parent().toggleClass("open");
-                }
-            });
-        });     
-        </script>
+ <meta charset="utf-8">
  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
+ 
+ <!-- Bootstrap core CSS 內文的css連結 (外匡？)-->
+ <link rel="stylesheet" href="/stylesheets/assets/bootstrap.min.css">
+ <!-- Fonts -->
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+ <!-- Custom styles for this template內文的css連結(外匡？) -->
+ <link rel="stylesheet" href="/stylesheets/assets/mediumish.css" >
+ <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+ <link rel="stylesheet" href="/stylesheets/css/all.min.css">
+ <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
+ <!-- 下拉選單外掛 -->
+ <style>
+	 .dropdown:hover .dropdown-menu{
+		 display: block;
+	 }
+	 .dropdown-menu{
+		 margin-top: 0;
+		 background-color: #DBC89B;
+	 }
+	 .dropdown-item{
+		 background-color: #DBC89B;
+		 color: #FFFEFB;
+	 }
+	 .collapse {
+		 color: #A88E4F;
+	 }
+ 
+ </style>
+ <script>
+	 $(document).ready(function(){
+		 $(".dropdown").hover(function(){
+			 var dropdownMenu = $(this).children(".dropdown-menu");
+			 if(dropdownMenu.is(":visible")){
+				 dropdownMenu.parent().toggleClass("open");
+			 }
+		 });
+	 });     
+	 </script> 
+<!-- 下拉選單外掛 end-->
  </head>
  <body>
      <!-- Page Loader -->
