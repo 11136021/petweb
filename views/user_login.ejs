@@ -135,41 +135,46 @@
          </div>
      </nav>
  
-     <div class="box-user">
-         <span class="line"></span>
-         <span class="text">
-             <div class="send-message">
-                 <div class="section-heading">
-                     <h2>登入</h2>
-                 </div>
- 
-                 <div class="col-md-8">
-                     <div class="contact-form">
-                         <form action="/user/login" method="post">
-                             <div class="row">
-                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                     <fieldset>
-                                         <input name="email" type="text" class="form-control" id="email"
-                                             placeholder="電子郵件" required="">
-                                     </fieldset>
-                                 </div>
-                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                     <fieldset>
-                                         <input name="password" type="password" class="form-control" id="password"
-                                             placeholder="密碼" required="">
-                                     </fieldset>
-                                 </div>
-                                 <div class="col-lg-12">
-                                     <span class="name"></span>
-                                     <span class="btn"><input type="submit" value="確認"></span>
-                                 </div>
-                             </div>
-                     </div>
-                     </form>
-                 </div>
-             </div>
-         </span>
-     </div>
+     <section id="main">
+        <div class="container">
+            <div class="box-user">
+                <span class="line"></span>
+                <span class="text">
+                    <div class="send-message">
+                        <div class="section-heading">
+                            <h2>登入</h2>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="contact-form">
+                                <form action="/member/add" method="post">
+                                    <div class="form">
+                                        <div class="form">
+                                            <!--<span class="name">帳號</span>
+                                    <span class="value"><input type="text" class="form-control" name="memno" required=""></span>
+                                    <br/>-->
+                                            <span class="name">帳號</span>
+                                            <span class="value"><input type="text" class="form-control" name="email"
+                                                    placeholder="請輸入您的電子郵件位址，或使用google帳號登入"></span>
+                                            <br />
+                                            <span class="name">密碼 </span>
+                                            <span class="value"><input type="password" class="form-control"
+                                                    name="password" required=""></span>
+                                            <br />
+                                            
+                                            <span class="name"></span>
+                                            <span class="value"><input type="submit" value="登入"></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            </span>
+        </div>
+    </section>
      <div class="container-fluid tm-container-content tm-mt-60">
          <!--<div class="row mb-4">
              <h2 class="col-6 tm-text-primary">
