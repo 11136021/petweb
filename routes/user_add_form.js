@@ -14,12 +14,21 @@ router.post('/',async function(req, res, next) {
   
   var email = req.body.email;
   var password = req.body.password;
+  var birthday = req.body.birthday;
+  var name = req.body.name;
+
       
   // 建立一個新資料物件
   const newData = new UserModel({
     email: email,
-    password: password    
+    password: password,
+    birthday: birthday,
+    name:name
   });
+  //到資料庫中尋找是否有相同的帳號，若沒有即可註冊（一個mail只能申請一個帳號)
+  
+  console.log(db.usermodels.find({ "email":email }))
+
   await newData.save()
   .then(function(model) { //成功
     console.log(model);
@@ -27,6 +36,7 @@ router.post('/',async function(req, res, next) {
   })
   .catch(function(err){//失敗
     console.log(err);
+    res.redirect("/user_addFail");
   })
   res.render('test');
 
