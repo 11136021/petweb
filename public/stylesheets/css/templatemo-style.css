@@ -201,6 +201,7 @@ a:hover { color:#B8A067; }/*游標放上去時的字體顏色*/
 .navbar-brand {  /*navbar字體顏色？*/
     color: #A88E4F;
     font-size: 1.6rem;
+    height: 50%;
 }
 
 .navbar-brand i { font-size: 2rem; }
