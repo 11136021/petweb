@@ -23,12 +23,14 @@ router.post('/',async function(req, res, next) {
     email: email,
     password: password,
     birthday: birthday,
-    name:name
+    name: name
   });
-  //到資料庫中尋找是否有相同的帳號，若沒有即可註冊（一個mail只能申請一個帳號)
+  //到資料庫中尋找是否有相同的帳號
   
-  console.log(db.usermodels.find({ "email":email }))
+  await UserModel.find({ email: '11136021@ntub.edu.tw' }).exec(); 
+  
 
+  //若沒有即可註冊（一個mail只能申請一個帳號)
   await newData.save()
   .then(function(model) { //成功
     console.log(model);
