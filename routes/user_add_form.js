@@ -28,19 +28,23 @@ router.post('/',async function(req, res, next) {
   //到資料庫中尋找是否有相同的帳號
 
   //console.log("此帳號已註冊過");
-  await UserModel.find({ email: email }).exec(); //從資料庫中抓取資料
-  
+  await UserModel.find({ email: email }).exec() //從資料庫中抓取資料
   //若沒有即可註冊（一個mail只能申請一個帳號)
-  await newData.save()
   .then(function(model) { //成功
-    console.log(model);
-    res.redirect("/user_login");//TODO: 確認之後新頁面
+    console.log('model.length' + model.length)
+    if(model.length===0){
+      newData.save()
+      console.log("1");
+      res.redirect("/user_login");//TODO: 確認之後新頁面
+    }else{
+      console.log(model);
+      res.redirect("/user_addFail");
+    }
   })
   .catch(function(err){//失敗
     console.log(err);
     res.redirect("/user_addFail");
   })
-  res.render('test');
 
 });
 module.exports = router;
