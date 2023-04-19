@@ -24,7 +24,7 @@ var ArticleSchema = new Schema({//新增文章
     //photo: String
 });
 // Compile model from schema 物件名
-var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
+var SomeModel = mongoose.model('SomeModel', SomeModelSchema ); //test
 var UserModel = mongoose.model('UserModel', UserSchema);
 var CategoryModel = mongoose.model('CategoryModel', CategorySchema);
 var ArticleModel = mongoose.model('ArticleModel', ArticleSchema);
