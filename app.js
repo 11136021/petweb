@@ -39,6 +39,7 @@ var author = require('./routes/author');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 var test2 = require('./routes/test2');//湘雲測試的畫面 勿動
 
+
 var app = express();
 
 // view engine setup
@@ -85,6 +86,7 @@ app.use('/post', post);
 app.use('/author', author);
 app.use('/test', test);
 app.use('/test2', test2);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
