@@ -38,6 +38,7 @@ var post = require('./routes/post'); //文章內頁
 var author = require('./routes/author');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 var test2 = require('./routes/test2');//湘雲測試的畫面 勿動
+var forge_html = require('./routes/forge_html');
 
 
 var app = express();
@@ -86,6 +87,7 @@ app.use('/post', post);
 app.use('/author', author);
 app.use('/test', test);
 app.use('/test2', test2);
+app.use('/forge_html', forge_html);
 
 
 // catch 404 and forward to error handler
