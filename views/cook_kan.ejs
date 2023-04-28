@@ -3,10 +3,10 @@
  <html lang="en">
  <head>
  <meta charset="utf-8">
- <!-- 標題-->
+ 
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <title>Pet伴，陪伴</title>  
-  <!-- 標題end-->
+	  <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
+ 
  <!-- Bootstrap core CSS 內文的css連結 (外匡？)-->
  <link rel="stylesheet" href="/stylesheets/assets/bootstrap.min.css">
  <!-- Fonts -->
@@ -44,76 +44,366 @@
 			 }
 		 });
 	 });     
-	 </script> 
+	 </script>
 <!-- 下拉選單外掛 end-->
  </head>
- <body>
-     <!-- Page Loader -->
-     <div id="loader-wrapper">
-         <div id="loader"></div>
- 
-         <div class="loader-section section-left"></div>
-         <div class="loader-section section-right"></div>
- 
-     </div>
-
-
-    <nav class="navbar navbar-expand-lg">
+  <body>
+      <!-- Page Loader -->
+      <div id="loader-wrapper">
+          <div id="loader"></div>
+  
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+  
+      </div>
+           <!-- navbar-->
+     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+           <div class="nav">
             <a class="navbar-brand" href="/main">
                 <i class="fas fa-film mr-2"></i>
-                Pet伴，陪伴
+               Pet伴，陪伴
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                <li class="nav-item"> 
-                    <a class="nav-link nav-link-1"  href="/main">主頁</a> <!--aria-current="page"-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2 active" href="/cook_kan">食譜</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="/medical_kan">醫療</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="/lost_kan">走失</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/shopping_kan">揪團購</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="＃">旅遊</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="＃">個人檔案</a><!-- 改 （放人頭圖片）-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="/user_logout">登出</a><!-- 改 （放人頭圖片）-->
-                </li>
-            </ul>
-            </div>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+               <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="main" role="button" aria-expanded="false">主頁</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="new_article">新增文章、貼文</a></li>
+                     <li><a class="dropdown-item" href="art_edit">文章編輯</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">食譜</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="cook_kan_rare">生食</a></li>
+                     <li><a class="dropdown-item" href="cook_kan_cooked">熟食</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="medical_kan" role="button" aria-expanded="false">醫療</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="medical_kan_med_skin">皮膚</a></li>
+                     <li><a class="dropdown-item" href="medical_kan_med_organ">內科</a></li>
+                     <li><a class="dropdown-item" href="medical_kan_mouth">口腔</a></li>
+                     <li><a class="dropdown-item" href="medical_kan_med_limb">四肢</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="lost_kan" role="button" aria-expanded="false">走失</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="lost_picked">拾獲</a></li>
+                     <li><a class="dropdown-item" href="lost_lookfor">協尋</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">旅遊</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="tra_restaurant">餐廳</a></li>
+                     <li><a class="dropdown-item" href="tra_hotal">住宿</a></li>
+                     <li><a class="dropdown-item" href="tra_day">一日遊行程</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                   <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">個人檔案</a>
+                   <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
+                     <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
+                     <li><a class="dropdown-item" href="pro_newpw">重設密碼</a></li>
+                     <li><a class="dropdown-item" href="user_logout">登出</a></li>
+                   </ul>
+                 </li>
+
+           </div>
         </div>
     </nav>
+<!-- navbar END -->
+<!-- Begin Site Title
+================================================== -->
+<div class="container">
+	<div class="mainheading">
+		<h1 class="sitetitle">食普版</h1>
+		<p class="lead">
+			 寵物食譜，毛孩的專屬料理～
+		</p>
+	</div>
+<!-- End Site Title
+================================================== -->
+
+	<!-- Begin Featured
+	================================================== -->
+	<section class="featured-posts">
+	<div class="section-title">
+		<h2><span>熟食</span></h2>
+	</div>
+	<div class="card-columns listfeaturedtag">
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="cookpost">
+						<div class="thumbnail" style="background-image:url(img/demopic/cook1.jpg);">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="cookpost">不私藏，寵物零嘴手做</a></h2>
+						<h4 class="card-text">如何低成本製作鮮食，親自下廚、健康料理</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+								<a href="author"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author">王小明</a></span><br/>
+								<span class="post-date">22 March 2023</span></span><span class="post-read"></span>
+								</span>
+								<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="post">
+						<div class="thumbnail" style="background-image:url(img/demopic/cook2.jpg);">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="cookpost">雞蛋料理</a></h2>
+						<h4 class="card-text">南瓜蒸雞蛋，營養滿分</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+                                    <!-- 大頭貼圖片-->
+								<a href="author"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author">王小明</a></span><br/>
+								<span class="post-date">18 Feb 2023</span><span></span>
+								</span>
+								<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="post">
+						<div class="thumbnail" style="background-image:url(img/demopic/3.jpg);">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="post">Dreaming of Las Vegas Crazyness</a></h2>
+						<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+                                    <!-- 大頭貼圖片-->
+								<a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="#">Mary</a></span><br/>
+								<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+								</span>
+								<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="post">
+						<div class="thumbnail" style="background-image:url(img/demopic/4.jpg);">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="post">San Francisco at its best view in all seasons</a></h2>
+						<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+                                    <!-- 大頭貼圖片-->
+								<a href="author"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author">Sal</a></span><br/>
+								<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+								</span>
+								<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+	</div>
+	</section>
+	<!-- End Featured
+	================================================== -->
+
+	<!-- Begin List Posts
+	================================================== -->
+	<section class="recent-posts">
+	<div class="section-title">
+		<h2><span>生食</span></h2>
+	</div>
+	<div class="card-columns listrecent">
+
+		<!-- begin post -->
+		<div class="card">
+			<a href="post.html">
+				<img class="img-fluid" src="assets/img/demopic/5.jpg" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="post.html">Autumn doesn't have to be nostalgic, you know?</a></h2>
+				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="meta-footer-thumb">
+						<a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+						</span>
+						<span class="author-meta">
+						<span class="post-name"><a href="author.html">Sal</a></span><br/>
+						<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+						</span>
+						<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<a href="post.html">
+				<img class="img-fluid" src="assets/img/demopic/6.jpg" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="post.html">Best galleries in the world with photos</a></h2>
+				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="meta-footer-thumb">
+						<a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+						</span>
+						<span class="author-meta">
+						<span class="post-name"><a href="author.html">Sal</a></span><br/>
+						<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+						</span>
+						<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<a href="post.html">
+				<img class="img-fluid" src="assets/img/demopic/7.jpg" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="post.html">Little red dress and a perfect summer</a></h2>
+				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="meta-footer-thumb">
+						<a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+						</span>
+						<span class="author-meta">
+						<span class="post-name"><a href="author.html">Sal</a></span><br/>
+						<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+						</span>
+						<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<a href="post.html">
+				<img class="img-fluid" src="assets/img/demopic/8.jpg" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="post.html">Thinking outside the box can help you prosper</a></h2>
+				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="meta-footer-thumb">
+						<a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+						</span>
+						<span class="author-meta">
+						<span class="post-name"><a href="author.html">Sal</a></span><br/>
+						<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+						</span>
+						<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
 
 
-    <!-- 搜尋的地方
-    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
-        <form class="d-flex tm-search-form">
-            <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success tm-search-btn" type="submit">
-                <i class="fas fa-search"></i> 
-            </button>
-        </form>
-    </div>-->
+	</div>
+	</section>
+	<!-- End List Posts
+	================================================== -->
 
-    <!-- loading轉圈的畫面-->
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-     <script src="/javascript/js/plugins.js"></script>
-     <script>
-        $(window).on("load", function() {
-            $('body').addClass('loaded');
-        });
-    </script>
+	<!-- Begin Footer -->
+	<footer>
+	<div class="footer">
+		<p class="pull-left">
+            Designed by &copy; Pet伴，陪伴
+		</p>
+		
+		<div class="clearfix">
+		</div>
+	</div>
+	</footer>>
+	<!-- End Footer-->
+  
+     
+      <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+      <script src="/javascript/js/plugins.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script>
+          $(window).on("load", function() {
+              $('body').addClass('loaded');
+          });
+      </script>
+  </body>
+  </html>
