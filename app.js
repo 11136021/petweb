@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 
 //這裡加入route
 var indexRouter = require('./routes/index'); 
@@ -41,6 +43,7 @@ var author = require('./routes/author');
 var test = require('./routes/test');//湘雲測試的畫面 勿動
 var test2 = require('./routes/test2');//湘雲測試的畫面 勿動
 var forge_html = require('./routes/forge_html');
+var logout = require('./routes/logout');
 
 
 var app = express();
@@ -54,6 +57,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: '$RbUh0qN$48HO7I',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {secure: false, maxAge: 60000}
+}));
 
 // 這裡加入use
 app.use('/', indexRouter);
@@ -92,6 +102,7 @@ app.use('/author', author);
 app.use('/test', test);
 app.use('/test2', test2);
 app.use('/forge_html', forge_html);
+app.use('/logout',logout);
 
 
 // catch 404 and forward to error handler

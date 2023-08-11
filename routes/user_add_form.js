@@ -5,6 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  //加東西
   console.log('test');
   res.render('user_add_form');
 });
@@ -33,7 +34,7 @@ router.post('/',async function(req, res, next) {
   .then(function(model) { //成功
     console.log('model.length' + model.length)
     if(model.length===0){
-      newData.save()
+      newData.save() //newdata 存進去
       console.log("1");
       res.redirect("/user_login");//TODO: 確認之後新頁面
     }else{
