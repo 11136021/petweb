@@ -20,8 +20,8 @@ router.post('/',async function(req, res, next) {
     if(model.length===0){ //沒有抓到資料，表示不符合條件，即登入失敗
       res.redirect("/user_addFail");
     }else{ //有抓到資料，表示符合條件，即登入成功
-      req.session.email = email
-      res.redirect("/main");
+      req.session.email = email //登入成功之後用email來存
+      res.redirect("/main"); 
     }
   })
   .catch(function(err){ //觸發例外，先不管，直接跳登入失敗

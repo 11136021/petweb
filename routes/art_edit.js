@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('art_edit');
+  if(req.session.email){
+    var email = req.session.email;
+    res.render('/art_edit');
+  }else{
+    res.redirect('/user_login')
+  }
 });
 
 module.exports = router;
