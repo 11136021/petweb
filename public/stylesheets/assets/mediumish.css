@@ -5,7 +5,7 @@ Version:1.0.1
 License: https://www.wowthemes.net/freebies-license/
 */
 body {
-	padding-top:5rem;
+	padding-top:0rem;
 }
 .mainheading {
 	padding:1rem 0rem;
@@ -447,3 +447,34 @@ ul.tags li a:hover {
 	border-radius:50%;
 	font-size:12px;
 }
+body{
+  font-family: "Noto Sans","Microsoft JhengHei";
+  font-weight:600;
+  font-size:18px;
+}
+.box{
+  width: 150px;
+  height: 100px;
+  background: #ffffff;
+  margin: 0 auto;/*區塊置中*/
+}
+p{
+  text-align:center;
+  line-height: 10px;/*與包著的區塊設定同高度即可*/
+}
+
+body{
+	font-family: "Noto Sans","Microsoft JhengHei";
+	font-weight:600;
+	font-size:18px;
+  }
+  .box2{
+	width: -9px;
+	height: 0%;
+	background: #ffffff;
+	margin: 0 auto;/*區塊置中*/
+  }
+  p{
+	text-align:center;
+	line-height: 10px;/*與包著的區塊設定同高度即可*/
+  }
