@@ -30,7 +30,9 @@ router.post('/',async function(req, res, next) {
     });
 
     newData.save()
-    res.redirect("/main");
+    
+    res.redirect("/"); //送出貼文之後，根據發布貼文所選擇的類別，跳轉到該類別的瀏覽畫面
+    //用name去改？
 
 
 
