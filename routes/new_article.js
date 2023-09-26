@@ -29,8 +29,26 @@ router.post('/',async function(req, res, next) {
     });
 
     newData.save()
-    
-    res.redirect("/main"); //送出貼文之後，根據發布貼文所選擇的類別，跳轉到該類別的瀏覽畫面
+
+    switch (category) {
+      case "recipe":
+        res.redirect("/cook_kan")
+        break
+      case "medical":
+        res.redirect("/medical_kan")
+        break
+      case "lost":
+        res.redirect("/lost_kan")
+        break
+      case "travel":
+        res.redirect("/travel_kan") 
+        break
+      default:
+        res.redirect("/main")
+        break
+    }
+
+    //送出貼文之後，根據發布貼文所選擇的類別，跳轉到該類別的瀏覽畫面
     //用name去改？
 
 
