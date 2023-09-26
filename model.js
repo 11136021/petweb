@@ -18,6 +18,7 @@ var CategorySchema = new Schema({//主題分類資料表
     
 });
 var ArticleSchema = new Schema({//新增文章
+    email: String, //使用者
     title: String,//標題
     category:String,//主題分類 ex:生食、熟食（下拉選單）
     content: String,//內文
