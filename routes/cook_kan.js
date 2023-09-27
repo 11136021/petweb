@@ -6,4 +6,5 @@ router.get('/', function(req, res, next) {
   res.render('cook_kan');
 });
 
+
 module.exports = router;
