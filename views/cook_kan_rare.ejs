@@ -115,6 +115,9 @@
 	<div class="mainheading">
 		<h1 class="sitetitle">生食版～</h1>
 		<p class="lead">
+			寵物食譜，毛孩的專屬料理～
+	   </p>
+		<p class="lead">
 		</p>
 	</div>
 <!-- End Site Title
@@ -138,289 +141,42 @@
 		</html>
 			
 		</h2>
-			<!-- begin post -->
-			<div class="card">
-				<div class="row">
-					<div class="col-md-5 wrapthumbnail">
-						<a href="cookpost">
-							<div class="thumbnail" style="background-image:url(img/demopic/rare1.jpg);">
-							</div>
-						</a>
-					</div>
-					<div class="col-md-7">
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">生骨肉餅</a></h2>
-							<h4 class="card-text">幫助毛孩們維持口腔清潔、牙齦健康</h4>
-							<div class="metafooter">
-								<div class="wrapfooter">
-									<span class="meta-footer-thumb">
-									<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-									</span>
-									<span class="author-meta">
-									<span class="post-name"><a href="author">王小明</a></span><br/>
-									<span class="post-date">22 March 2023</span></span><span class="post-read"></span>
-									</span>
-									<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-								</div>
+			<!-- Begin List Posts
+	================================================== -->
+
+	<section class="recent-posts">
+	
+		<div class="card-columns listrecent">
+			<% for (let i=0;i<model.length; i++){ %>
+				<div class="card">
+					<a href="cookpost">
+						<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="cookpost"><%= model[i].title %></a></h2><!-- 顯示標題-->
+						<h4 class="card-text">端午節，跟寶貝一起吃粽子</h4>	<!-- 這應該可以刪？-->
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+								<a href="author"><img class="author-thumb" src=/img/demopic/user2.jpeg alt="Sal"></a> <!-- 發布者的大頭貼-->
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author">Sal</a></span><br/><!-- 發布者的名字-->
+								<span class="post-date">15 Ｍay 2018</span> </span><span class="post-read">  </span><!-- 發布日期-->
+								</span>
+								<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end post -->
-	
-			<!-- begin post -->
-			<div class="card">
-				<div class="row">
-					<div class="col-md-5 wrapthumbnail">
-						<a href="cookpost">
-							<div class="thumbnail" style="background-image:url(img/demopic/rare2.jpg);">
-							</div>
-						</a>
-					</div>
-					<div class="col-md-7">
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">生食五大優點</a></h2>
-							<h4 class="card-text">以原型食物餵食，保住營養成分，增加免疫力</h4>
-							<div class="metafooter">
-								<div class="wrapfooter">
-									<span class="meta-footer-thumb">
-										<!-- 大頭貼圖片-->
-									<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-									</span>
-									<span class="author-meta">
-									<span class="post-name"><a href="author">Sal</a></span><br/>
-									<span class="post-date">05 Oct 2021</span><span></span>
-									</span>
-									<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--end post -->
-	
-			<!-- begin post -->
-			<div class="card">
-				<div class="row">
-					<div class="col-md-5 wrapthumbnail">
-						<a href="cookpost">
-							<div class="thumbnail" style="background-image:url(img/demopic/rare3.jpg);">
-							</div>
-						</a>
-					</div>
-					<div class="col-md-7">
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">生食黃金比例</a></h2>
-							<h4 class="card-text">80%無骨肉+10%骨頭+10%肝臟，模擬野外進食</h4>
-							<div class="metafooter">
-								<div class="wrapfooter">
-									<span class="meta-footer-thumb">
-										<!-- 大頭貼圖片-->
-									<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-									</span>
-									<span class="author-meta">
-									<span class="post-name"><a href="author">Mary</a></span><br/>
-									<span class="post-date">02 Oct 2022</span></span><span class="post-read"></span>
-									</span>
-									<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end post -->
-	
-			<!-- begin post -->
-			<div class="card">
-				<div class="row">
-					<div class="col-md-5 wrapthumbnail">
-						<a href="post">
-							<div class="thumbnail" style="background-image:url(img/demopic/rare4.jpg);">
-							</div>
-						</a>
-					</div>
-					<div class="col-md-7">
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">寵物也需要補充蔬果</a></h2>
-							<h4 class="card-text">凍乾天然蔬果製作，烘烤八小時</h4>
-							<div class="metafooter">
-								<div class="wrapfooter">
-									<span class="meta-footer-thumb">
-										<!-- 大頭貼圖片-->
-									<a href="author"><img class="author-thumb" src=/img/demopic/user2.jpeg alt="Sal"></a>
-									</span>
-									<span class="author-meta">
-									<span class="post-name"><a href="author">Sal</a></span><br/>
-									<span class="post-date">22 July 2017</span></span><span class="post-read"></span>
-									</span>
-									<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end post -->
-	
+			<%}%>
+			
+			
 		</div>
 		</section>
-		<!-- End Featured
+		<!-- End List Posts
 		================================================== -->
-
-	<!-- Begin List Posts
-	================================================== -->
-	<section class="recent-posts">
-	<div class="section-title">
-		<h2><span>更多</span></h2>
-	</div>
-	<div class="card-columns listrecent">
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">狗貓為什麼吃生食？</a></h2>
-				<h4 class="card-text">吃生食的五大優點，在這裡告訴你！</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">王小明</a></span><br/>
-						<span class="post-date">01 Jan 2019</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">經典菜單分享</a></h2>
-				<h4 class="card-text">每天為寵物要吃什麼煩惱嗎？這裡好康看過來</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user3.jpeg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">David</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">貓咪為什麼該吃生食？</a></h2>
-				<h4 class="card-text">消化不好、不愛喝水，跟飼料說掰掰</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user2.jpeg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 Feb 2022</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">生食分享！</a></h2>
-				<h4 class="card-text">一起幫寶貝做早餐吧~</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user3.jpeg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">David</a></span><br/>
-						<span class="post-date">04 July 2018</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">該如何分配生食比例</a></h2>
-				<h4 class="card-text">生食該如何選料，肌肉骨骼肝臟如何分配，這裡看過來</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">小美</a></span><br/>
-						<span class="post-date">22 May 2018</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href="cookpost"></a>
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href="cookpost">奢華套餐</a></h2>
-				<h4 class="card-text">生食級干貝、北海道牛舌</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user3.jpeg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">David</a></span><br/>
-						<span class="post-date">18 July 2019</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href="cookpost" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
+			
 
 	</div>
 	</section>
