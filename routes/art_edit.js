@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   if(req.session.email){
     var email = req.session.email;
-    res.render('/art_edit');
+    res.render('art_edit');
   }else{
     res.redirect('/user_login')
   }
