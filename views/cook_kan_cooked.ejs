@@ -33,17 +33,14 @@
 	 .collapse {
 		 color: #A88E4F;
 	 }
- 
+	 #autoresizing {
+            display: block;
+            overflow: hidden;
+            resize: none;
+        }
  </style>
  <script>
-	 $(document).ready(function(){
-		 $(".dropdown").hover(function(){
-			 var dropdownMenu = $(this).children(".dropdown-menu");
-			 if(dropdownMenu.is(":visible")){
-				 dropdownMenu.parent().toggleClass("open");
-			 }
-		 });
-	 });     
+	     
 	 </script>
 <!-- 下拉選單外掛 end-->
  </head>
@@ -115,6 +112,35 @@
 	</div>
 <!-- End Site Title
 ================================================== -->
+<div class="box-user">
+    <div class="send-message">
+        <div class="section-heading">
+            <h2>新增貼文</h2>
+        </div>
+        <div class="col-md-12">
+            <form action="" method="post"> <!-- 放入按下確認後會到的頁面 -->
+                <div class="form">
+                    <span class="value"><input type="text" name="title" placeholder="請輸入文章標題"></span>         
+                    <br>   
+                    <br>       
+                    <span class="name">輸入內文</span>
+                    <br>   
+                    <textarea type="textarea" id="autoresizing" style="width: 80%;" name="content" placeholder="文章內容在此輸入"></textarea>
+                    <br>   
+                    <br> 
+                    <span class="name">上傳圖片</span>
+                    <span class="value"><input type="file" name="photo"/></span>
+                  
+                    <span class="name"></span>
+                    <span class="value"><input type="submit" value="確認"></span>
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+</div>
 
 	<!-- Begin Featured
 	================================================== -->
@@ -196,6 +222,20 @@
           $(window).on("load", function() {
               $('body').addClass('loaded');
           });
+		  $(document).ready(function(){
+		 $(".dropdown").hover(function(){
+			 var dropdownMenu = $(this).children(".dropdown-menu");
+			 if(dropdownMenu.is(":visible")){
+				 dropdownMenu.parent().toggleClass("open");
+			 }
+		 });
+		 $('#autoresizing').on('input', function () {
+            this.style.height = 'auto';
+ 
+            this.style.height =
+                (this.scrollHeight) + 'px';
+        });
+	 }); 
       </script>
   </body>
   </html>
