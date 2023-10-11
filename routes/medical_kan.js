@@ -12,12 +12,12 @@ router.get('/', function(req, res, next) {
     ).exec()
       .then(function (model) {
         if (model.length === 0) {
-          console.log('travel_kan, model length == 0');
+          console.log('medical_kan, model length == 0');
           res.redirect("/user_addFail");
         } else { //有抓到資料，表示符合條件，即登入成功
           req.session.email = email //登入成功之後用email來存
-          console.log('travel_kan, model length == ' + model.length);
-          res.render('travel_kan', { model: model });
+          console.log('medical_kan, model length == ' + model.length);
+          res.render('medical_kan', { model: model });
         }
       })
       .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
