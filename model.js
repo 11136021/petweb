@@ -23,6 +23,7 @@ var ArticleSchema = new Schema({//新增文章
     category:String,//主題分類 ex:生食、熟食（下拉選單）
     subcate:String,
     content: String,//內文
+    updatedate:{ type : Date, default: Date.now }
     //photo: String
 });
 // Compile model from schema 物件名

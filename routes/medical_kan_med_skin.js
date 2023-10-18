@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     var email = req.session.email;
 
     ArticleModel.find( //從資料庫中抓取符合條件的資料
-      { category: 'medical' }
+    { subcate: 'med_skin' }
     ).exec()
       .then(function (model) {
         if (model.length === 0) {
