@@ -37,7 +37,6 @@ var profile = require('./routes/profile');
 var pro_edit = require('./routes/pro_edit');
 var pro_newpw = require('./routes/pro_newpw');
 var art_edit = require('./routes/art_edit');//編輯貼文
-var new_article = require('./routes/new_article'); //新增貼文
 var about_us = require('./routes/about_us');
 var cookpost = require('./routes/cookpost'); //文章內頁
 var author = require('./routes/author');
@@ -98,7 +97,7 @@ app.use('/profile', profile);
 app.use('/pro_edit', pro_edit);
 app.use('/pro_newpw', pro_newpw);
 app.use('/art_edit', art_edit);
-app.use('/new_article', new_article);
+
 app.use('/about_us', about_us);
 app.use('/cookpost', cookpost);
 app.use('/author', author);
