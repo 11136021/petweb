@@ -11,14 +11,10 @@ router.get('/', function (req, res, next) {
     { subcate: 'hotal' }
     ).exec()
       .then(function (model) {
-        if (model.length === 0) {
-          console.log('tra_hotal, model length == 0');
-          res.redirect("/user_addFail");
-        } else { //有抓到資料，表示符合條件，即登入成功
-          req.session.email = email //登入成功之後用email來存
+        
           console.log('tra_hotal, model length == ' + model.length);
           res.render('tra_hotal', { model: model });
-        }
+        
       })
       .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
         console.log(err);

@@ -109,7 +109,7 @@
 	<div class="mainheading">
 		<h1 class="sitetitle">寵物餐廳</h1>
 		<p class="lead">
-			 主頁內容～～
+			寵物友善餐廳推薦，和毛孩們一起用餐！
 		</p>
 	</div>
 <!-- End Site Title
@@ -173,160 +173,40 @@
 
 	<!-- Begin List Posts
 	================================================== -->
+
 	<section class="recent-posts">
-	<div class="section-title">
-		<h2><span>All Stories</span></h2>
-	</div>
-	<div class="card-columns listrecent">
-
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">Autumn doesn't have to be nostalgic, you know?</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+	
+		<div class="card-columns listrecent">
+			<% for (let i=0;i<model.length; i++){ %>
+				<div class="card">
+					<a href="cookpost">
+						<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
+					</a>
+					<div class="card-block">
+						<h2 class="card-title"><a href="cookpost"><%= model[i].title %></a></h2><!-- 顯示標題-->
+						
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+								<a href="author"><img class="author-thumb" src=/img/demopic/user2.jpeg alt="Sal"></a> <!-- 發布者的大頭貼-->
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author"><%= model[i].email %></a></span><br/><!-- 發布者的名字-->
+								<span class="post-date"></span><%= model[i].updatedate %></span><span class="post-read">  </span><!-- 發布日期-->
+								</span>
+								<span class="post-read-more"><a href="post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			<%}%>
+			
+			
 		</div>
-		<!-- end post -->
+		</section>
+		<!-- End List Posts
+		================================================== -->
 
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">Best galleries in the world with photos</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">Little red dress and a perfect summer</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">Thinking outside the box can help you prosper</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">10 Things you should know about choosing your house</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-		<!-- begin post -->
-		<div class="card">
-			<a href=" post">
-				<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
-			</a>
-			<div class="card-block">
-				<h2 class="card-title"><a href=" post">Visiting the world means learning cultures</a></h2>
-				<h4 class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
-				<div class="metafooter">
-					<div class="wrapfooter">
-						<span class="meta-footer-thumb">
-						<a href="author"><img class="author-thumb" src=/img/demopic/user.jpg alt="Sal"></a>
-						</span>
-						<span class="author-meta">
-						<span class="post-name"><a href="author">Sal</a></span><br/>
-						<span class="post-date">22 July 2017</span> </span><span class="post-read">  </span>
-						</span>
-						<span class="post-read-more"><a href=" post" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end post -->
-
-	</div>
-	</section>
-	<!-- End List Posts
-	================================================== -->
 
 	<!-- Begin Footer
 	================================================== -->
@@ -340,105 +220,6 @@
 	</div>
 	<!-- End Footer
 	================================================== -->
-  
-      <!-- 搜尋的地方 -->
-    <!-- <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
-         <form class="d-flex tm-search-form">
-             <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
-             <button class="btn btn-outline-success tm-search-btn" type="submit">
-                 <i class="fas fa-search"></i>  
-             </button>
-         </form>
-     </div>-->
- 
-     <!DOCTYPE html>
-     <body>
-     <img src="img/img-22.jpg"style="display:block; margin:auto;" width="1400" height="750" />
-     </body>
- 
- </html>
- 
-      <div class="container-fluid tm-container-content tm-mt-60">
-          <div class="row mb-4">
-              <h2 class="col-6 tm-text-primary">
-                  看板內容
-              </h2>
-             <!-- <div class="col-6 d-flex justify-content-end align-items-center">
-                  <form action="" class="tm-text-primary">
-                      Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 200
-                  </form>
-              </div>-->
-          </div>
-          <div class="row tm-mb-90 tm-gallery">
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                  <figure class="effect-ming tm-video-item">
-                      <img src="img/img-17.jpg" alt="Image" class="img-fluid">
-                      <figcaption class="d-flex align-items-center justify-content-center">
-                          <h2>食譜</h2>
-                          <a href="/cook_kan">View more</a> <!-- 不知道 View more在哪裏-->
-                      </figcaption>                    
-                  </figure>
-                  <!-- <div class="d-flex justify-content-between tm-text-gray">
-                     <span class="tm-text-gray-light">18 Oct 2020</span>
-                      <span>16,100 views</span>
-                  </div>-->
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                  <figure class="effect-ming tm-video-item">
-                      <img src="img/img-18.jpg" alt="Image" class="img-fluid">
-                      <figcaption class="d-flex align-items-center justify-content-center">
-                          <h2>醫療</h2>
-                          <a href="/medical_kan">View more</a> <!-- 不知道 View more在哪裏-->
-                      </figcaption>                    
-                  </figure>
-                  <!--<div class="d-flex justify-content-between tm-text-gray">
-                      <span class="tm-text-gray-light">14 Oct 2020</span>
-                      <span>16,100 views</span>
-                  </div>-->
-              </div>
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                  <figure class="effect-ming tm-video-item">
-                      <img src="img/img-19.jpg" alt="Image" class="img-fluid">
-                      <figcaption class="d-flex align-items-center justify-content-center">
-                          <h2>走失</h2>
-                          <a href="/lost_kan">View more</a> <!-- 不知道 View more在哪裏-->
-                      </figcaption>                    
-                  </figure>
-                  <!--<div class="d-flex justify-content-between tm-text-gray">
-                      <span class="tm-text-gray-light">12 Oct 2020</span>
-                      <span>12,460 views</span>
-                  </div>-->
-              </div>
-              
-              
-              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                  <figure class="effect-ming tm-video-item">
-                      <img src="img/img-21.jpg" alt="Image" class="img-fluid">
-                      <figcaption class="d-flex align-items-center justify-content-center">
-                          <h2>旅遊</h2>
-                          <a href="/travel_kan">View more</a> <!-- 不知道 View more在哪裏-->
-                      </figcaption>                    
-                  </figure>
-                   <!--<div class="d-flex justify-content-between tm-text-gray">
-                      <span class="tm-text-gray-light">24 Sep 2020</span>
-                      <span>16,008 views</span>
-                  </div>-->
-              </div>  
-       </div> <!-- row -->
-         <!-- <div class="row tm-mb-90">
-              <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
-                  <a href="#" class="btn btn-primary tm-btn-prev mb-2 disabled">Previous</a>
-                  <div class="tm-paging d-flex">
-                      <a href="#" class="active tm-paging-link">1</a>
-                      <a href="#" class="tm-paging-link">2</a>
-                      <a href="#" class="tm-paging-link">3</a>
-                      <a href="#" class="tm-paging-link">4</a>
-                  </div>
-                  <a href="javascript:void(0);" class="btn btn-primary tm-btn-next">Next Page</a>
-              </div>            
-          </div>
-      </div>--> <!-- container-fluid, tm-container-content -->
-  
       
       <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
       <script src="/javascript/js/plugins.js"></script>
