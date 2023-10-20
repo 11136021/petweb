@@ -94,6 +94,46 @@
 <!-- Begin Top article edit
 ================================================== -->
 
+<!-- Begin List Posts
+	================================================== -->
+
+	<section class="recent-posts">
+        <div class="section-title">
+            <h2><span>編輯貼文</span></h2>
+        </div>
+        <div class="listrecent listrelated"></div>
+        <div class="card-columns listrecent">
+            <% for (let i=0;i<model.length; i++){ %>
+                
+                <div class="authorpostbox">
+					<div class="card">
+						<a href="author">
+						<img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
+						</a>
+						<div class="card-block">
+							<h2 class="card-title"><a href="cookpost"><%= model[i].title %></a></h2>
+                                    <div class="metafooter">
+								<div class="wrapfooter">
+									<span class="meta-footer-thumb">
+									<span class="post-date"><%= model[i].updatedate %></span></span><span class="post-read"></span>
+									</span>
+									<span class="post-read-more"><a href="" title="Read Story">刪除</a></span><!-- 加上刪除功能-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+            <%}%>
+            
+            
+        </div>
+        </section>
+        <!-- End List Posts
+        ================================================== -->
+
+        
+
 <div class="graybg authorpage">
 	<div class="container">         
         <div class="section-title">
@@ -122,75 +162,6 @@
 					</div>
 				</div>
 				<!-- end post -->
-
-				<!-- begin post -->
-		    <div class="authorpostbox">
-                <div class="card">
-                    <a href="author">
-                    <img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
-                    </a>
-                    <div class="card-block">
-                        <h2 class="card-title"><a href="cookpost">生食五大優點</a></h2>
-                            <h4 class="card-text">以原型食物餵食，保住營養成分，增加免疫力</h4>
-                                <div class="metafooter">
-                            <div class="wrapfooter">
-                                <span class="meta-footer-thumb">
-                                <span class="post-date">22 March 2023</span></span><span class="post-read"></span>
-                                </span>
-                                <span class="post-read-more"><a href="" title="Read Story">刪除</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-				<!-- end post -->
-                <div class="section-title">
-                    <h2><span>編輯貼文－旅遊</span></h2>
-                </div>
-				<!-- begin post -->
-                <div class="authorpostbox">
-					<div class="card">
-						<a href="author">
-						<img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
-						</a>
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">真心推薦的寵物餐廳</a></h2>
-                                <h4 class="card-text">台中一日遊，網美寵物餐廳踩點</h4>
-                                    <div class="metafooter">
-								<div class="wrapfooter">
-									<span class="author-meta"></span>
-									<span class="post-date">22 March 2023</span></span><span class="post-read"></span>
-									</span>
-									<span class="post-read-more"><a href="" title="Read Story">刪除</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end post -->
-
-                <!-- begin post -->
-                <div class="authorpostbox">
-					<div class="card">
-						<a href="author">
-						<img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
-						</a>
-						<div class="card-block">
-							<h2 class="card-title"><a href="cookpost">一起去踏青</a></h2>
-                                <h4 class="card-text">台中美麗山，寵物友善，是一起出遊的好地方</h4>
-                                    <div class="metafooter">
-								<div class="wrapfooter">
-									</span>
-									<span class="author-meta">
-									<span class="post-date">22 March 2023</span></span><span class="post-read"></span>
-									</span>
-									<span class="post-read-more"><a href="" title="Read Story">刪除</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-                <!-- end post -->
 		</div>
 	</div>
 </div>
