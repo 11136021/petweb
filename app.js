@@ -15,9 +15,6 @@ var user_logout = require('./routes/user_logout');
 var user_loginFail = require('./routes/user_loginFail');
 var user_addFail = require('./routes/user_addFail');
 var user_add_form = require('./routes/user_add_form');
-var cook_kan = require('./routes/cook_kan');
-var medical_kan = require('./routes/medical_kan');
-var lost_kan = require('./routes/lost_kan');
 var shopping_kan = require('./routes/shopping_kan');
 var cook_kan_rare = require('./routes/cook_kan_rare');
 var cook_kan_cooked = require('./routes/cook_kan_cooked');
@@ -27,8 +24,6 @@ var medical_kan_mouth = require('./routes/medical_kan_mouth');
 var medical_kan_med_limb = require('./routes/medical_kan_med_limb');
 var lost_lookfor = require('./routes/lost_lookfor');
 var lost_picked = require('./routes/lost_picked');
-
-var lostpost2 = require('./routes/lostpost2');
 var tra_day = require('./routes/tra_day');
 var tra_hotal = require('./routes/tra_hotal');
 var travel_kan = require('./routes/travel_kan');
@@ -69,15 +64,12 @@ app.use(session({
 // 這裡加入use
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/main', main);
-app.use('/user_login', user_login);
-app.use('/user_logout', user_logout);
-app.use('/user_loginFail', user_loginFail);
-app.use('/user_addFail', user_addFail);
-app.use('/user_add_form', user_add_form);
-app.use('/cook_kan', cook_kan);
-app.use('/medical_kan', medical_kan);
-app.use('/lost_kan', lost_kan);
+app.use('/main', main); //未登入的主頁
+app.use('/user_login', user_login); //登入畫面
+app.use('/user_logout', user_logout); //登出後畫面
+app.use('/user_loginFail', user_loginFail); //登入失敗畫面
+app.use('/user_addFail', user_addFail); 
+app.use('/user_add_form', user_add_form);  //註冊畫面
 app.use('/shopping_kan', shopping_kan);
 app.use('/cook_kan_rare', cook_kan_rare);
 app.use('/cook_kan_cooked', cook_kan_cooked);
@@ -87,9 +79,7 @@ app.use('/medical_kan_mouth', medical_kan_mouth);
 app.use('/medical_kan_med_limb', medical_kan_med_limb);
 app.use('/lost_lookfor', lost_lookfor);
 app.use('/lost_picked', lost_picked);
-
-app.use('/lostpost2', lostpost2);
-app.use('/tra_day', tra_day);
+app.use('/tra_day', tra_day); //一日遊
 app.use('/tra_hotal', tra_hotal);
 app.use('/travel_kan', travel_kan);
 app.use('/tra_restaurant', tra_restaurant);
@@ -97,7 +87,6 @@ app.use('/profile', profile);
 app.use('/pro_edit', pro_edit);
 app.use('/pro_newpw', pro_newpw);
 app.use('/art_edit', art_edit);
-
 app.use('/about_us', about_us);
 app.use('/cookpost', cookpost);
 app.use('/author', author);
