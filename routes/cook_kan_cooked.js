@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const { ArticleModel } = require('../model.js');
 const path = require('path');
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   if (req.session.email) {
@@ -67,10 +68,6 @@ router.post('/',async function(req, res, next) {
   }else{
       res.redirect('/user_login') //session
   }
-
-
-    //送出貼文之後，根據發布貼文所選擇的類別，跳轉到該類別的瀏覽畫面
-    //用name去改？
 
   
 });
