@@ -123,7 +123,7 @@
             <h2>新增貼文</h2>
         </div>
         <div class="col-md-12">
-            <form action="" method="post"> <!-- 放入按下確認後會到的頁面 -->
+            <form action="" method="post" encType="multipart/form-data"> <!-- 放入按下確認後會到的頁面 -->
                 <div class="form">
                     <span class="value"><input type="text" name="title" placeholder="請輸入文章標題"></span>         
                     <br>   
@@ -182,7 +182,7 @@
 			<% for (let i=0;i<model.length; i++){ %>
 				<div class="card">
 					<a href="lostpost">
-						<img class="img-fluid" src="/img/demopic/001.jpg" alt="">
+						<img class="img-fluid" src="//photo/<%= model[i].photo %>" alt="" width="400" height="500">
 					</a>
 					<div class="card-block">
 						<h2 class="card-title"><a href="lostpost"><%= model[i].title %></a></h2><!-- 顯示標題-->
