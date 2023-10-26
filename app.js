@@ -61,6 +61,14 @@ app.use(session({
   cookie: {secure: false, maxAge: 60000}
 }));
 
+//新增圖片
+const fileUpload = require('express-fileupload');
+
+app.use(fileUpload({
+  useTempFiles : true,
+  tempFileDir : '/tmp/'
+}));
+
 // 這裡加入use
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
