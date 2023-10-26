@@ -120,4 +120,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.use('/photo', express.static(path.join(__dirname, '/photo')))
+console.log('static: ' + path.join(__dirname, '/photo'));
 module.exports = app;

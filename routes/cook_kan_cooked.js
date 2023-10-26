@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const { ArticleModel } = require('../model.js');
-
+const path = require('path');
 /* GET home page. */
 router.get('/', function (req, res, next) {
   if (req.session.email) {
@@ -40,7 +40,7 @@ router.post('/',async function(req, res, next) {
   
     // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
     sampleFile = req.files.photo;
-    uploadPath = __dirname + '/photo/' + sampleFile.name;
+    uploadPath = path.join(__dirname, '/..', '/photo/') + sampleFile.name;
     console.log(`fileuploadpath: ${uploadPath}`);
     // Use the mv() method to place the file somewhere on your server
     sampleFile.mv(uploadPath, function(err) {
@@ -59,7 +59,7 @@ router.post('/',async function(req, res, next) {
       category: category,
       subcate:'cooked',
       content: content,
-      photo:uploadPath
+      photo:sampleFile.name
     });
 
     newData.save()
