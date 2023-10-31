@@ -35,8 +35,6 @@ var art_edit = require('./routes/art_edit');//編輯貼文
 var about_us = require('./routes/about_us');
 var cookpost = require('./routes/cookpost'); //文章內頁
 var author = require('./routes/author');
-var test = require('./routes/test');//湘雲測試的畫面 勿動
-var test2 = require('./routes/test2');//湘雲測試的畫面 勿動
 var forge_html = require('./routes/forge_html');
 var logout = require('./routes/logout');
 
@@ -98,8 +96,6 @@ app.use('/art_edit', art_edit);
 app.use('/about_us', about_us);
 app.use('/cookpost', cookpost);
 app.use('/author', author);
-app.use('/test', test);
-app.use('/test2', test2);
 app.use('/forge_html', forge_html);
 app.use('/logout',logout);
 
