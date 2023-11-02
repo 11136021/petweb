@@ -111,13 +111,13 @@
                             <img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
                             </a>
                             <div class="card-block">
-                                <h2 class="card-title"><a href="cookpost"><%= model[i].title %></a></h2>
+                                <h2 class="card-title"><a href="art_edit/edit/<%= model[i].id %>"><%= model[i].title %></a></h2>
                                         <div class="metafooter">
                                     <div class="wrapfooter">
                                         <span class="meta-footer-thumb">
                                         <span class="post-date"><%= model[i].updatedate %></span></span><span class="post-read"></span>
                                         </span>
-                                        <span class="post-read-more"><a href="" title="Read Story">刪除</a></span> 				<!-- 加上刪除功能-->
+                                        <span class="post-read-more"><a href="art_edit/delete/<%= model[i].id %>" title="Read Story" onclick="return checkIsDelete()">刪除</a></span> 				<!-- 加上刪除功能-->
                                     </div>
                                 </div>
                             </div>
@@ -166,6 +166,13 @@
          $(window).on("load", function() {
              $('body').addClass('loaded');
          });
+
+         function checkIsDelete(){
+            if (confirm("確定是否要刪除?")) {
+                return true;
+            }
+            return false;
+         }
      </script>
  </body>
  </html>

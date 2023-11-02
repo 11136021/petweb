@@ -33,7 +33,6 @@ var pro_edit = require('./routes/pro_edit');
 var pro_newpw = require('./routes/pro_newpw');
 var art_edit = require('./routes/art_edit');//編輯貼文
 var about_us = require('./routes/about_us');
-var cookpost = require('./routes/cookpost'); //文章內頁
 var author = require('./routes/author');
 var forge_html = require('./routes/forge_html');
 var logout = require('./routes/logout');
@@ -56,7 +55,7 @@ app.use(session({
   secret: '$RbUh0qN$48HO7I',
   resave: true,
   saveUninitialized: true,
-  cookie: {secure: false, maxAge: 60000}
+  cookie: {secure: false, maxAge: 60000000000}
 }));
 
 //新增圖片
@@ -94,7 +93,6 @@ app.use('/pro_edit', pro_edit);
 app.use('/pro_newpw', pro_newpw);
 app.use('/art_edit', art_edit);
 app.use('/about_us', about_us);
-app.use('/cookpost', cookpost);
 app.use('/author', author);
 app.use('/forge_html', forge_html);
 app.use('/logout',logout);
