@@ -36,9 +36,32 @@ router.get('/edit/:id', function (req, res, next) {
       { _id: id }
     ).exec()
       .then(function (model) {
-          console.log(model)
           console.log('art_edit, model length == ' + model.length);
           res.render('cookpost', { model: model });
+      })
+      .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
+        console.log(err);
+        res.redirect("/user_addFail");
+      })
+  }else{
+  res.redirect("/user_login");
+}});
+
+router.post('/edit/:id', function (req, res, next) {
+  if (req.session.email) {
+    
+    var id = req.params.id;
+    var title = req.body.title;
+    var content = req.body.edit_content;
+
+    var queryValue = {_id:id};
+    var editValues = {title: title, content: content };
+    // {查詢,修改成}
+    ArticleModel.updateOne( //從資料庫中抓取符合條件的資料
+      queryValue, editValues
+    ).exec()
+      .then(function (model) {
+          res.redirect("/art_edit/edit/" + id);
       })
       .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
         console.log(err);

@@ -128,7 +128,7 @@
 <div class="container">
 	<div class="row">
 
-
+	<form method="post">
 		<!-- Begin Post -->
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading">
@@ -145,34 +145,26 @@
 				</div>
 				<!-- End Top Menta -->
 
-				<h1 class="posttitle"><%= model[0].title %></h1>
+				<label for="edit_title">修改標題:</label>
+				<input type="text" name="edit_title" id="edit_title" value="<%= model[0].title %>">
 
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="/img/demopic/cook1.jpg" alt="">
+			<img class="featured-image img-fluid" src="/photo/<%= model[0].photo %>" alt="">
 			<!-- End Featured Image -->
 
 			<!-- Begin Post Content -->
-			<div class="article-post"><%= model[0].content%>
-				
+			<div class="article-post">
+				<label for="edit_content">修改內文:</label>
+				<textarea name="edit_content" id="edit_content" cols="100" rows="10"><%= model[0].content %></textarea>
+				<input type="submit" value="修改" onclick="return checkIsEdit()">
 			</div>
-			
-
 		</div>
 		<!-- End Post -->
-
+	</form>
 <!-- End Article
 ================================================== -->
-<!-- 留言板區 -->
-<span class="name">留言板</span>
-                    <br>   
-                    <textarea type="textarea" style="height: 100px; width: 500px;" name="＃" placeholder="我也要留言"></textarea>
-					<span class="name"></span>
-                    <span class="value"><input type="submit" value="送出"></span>
-	</div>
-</div>
-<!-- End 留言板 -->
 <div class="hideshare"></div>
 
 <!-- Begin Related
@@ -277,6 +269,13 @@
         $(window).on("load", function() {
             $('body').addClass('loaded');
         });
+
+		function checkIsEdit(){
+            if (confirm("確定是否要修改?")) {
+                return true;
+            }
+            return false;
+         }
     </script>
 </body>
 </html>
