@@ -115,6 +115,7 @@
 					<div class="col-md-2 col-xs-12">
 						<img class="author-thumb" src=/img/demopic/user2.jpeg alt="David">
 					</div>
+          <textarea type="textarea" id="autoresizing" style="width: 80%;" name="content" placeholder="輸入自介"></textarea>
           <span class="post-read-more"><a href="" title="Read Story"></path>修改自介</svg></a></span>
 				</div>
 			</div>
@@ -137,13 +138,13 @@
 						<div class="card-block">
 							<h2 class="card-title">我的個人檔案</a></h2>
               <br>
-              <h4 class="card-text"><%= model[i].name %></h4>
+              <h4 class="card-text">暱稱：<%= model[i].name %></h4>
               <br>
-              <h4 class="card-text">email:<%= model[i].email %></h4>
+              <h4 class="card-text">email：<%= model[i].email %></h4>
             <br>
             <h4 class="card-text">飼養的寵物：狗</h4>
             <br>
-            <h4 class="card-text"><%= model[i].birthday %></h4>
+            <h4 class="card-text">生日：<%= model[i].birthday %></h4>
           
 <%}%>            
               <h4 class="card-text"></h4>
