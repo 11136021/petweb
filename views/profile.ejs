@@ -99,7 +99,7 @@
 
 <!-- Begin Top Author Page
 ================================================== -->
-
+<% for (let i=0;i<model.length; i++){ %>
  <div class="container">
 	<div class="row">
 		<div class="col-md-2"></div>
@@ -107,7 +107,7 @@
 			<div class="mainheading">
 				<div class="row post-top-meta authorpage">
 					<div class="col-md-10 col-xs-12">
-						<h1>David</h1>
+						<h1><%= model[i].email %></h1>
 						<span class="author-description"> <strong>狗奴才一枚</strong> <br>希望主子們吃得健康，快樂成長</span>
 					</div>
           
@@ -120,6 +120,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- End Top Author Meta
 ================================================== -->
 
@@ -135,15 +136,15 @@
 						<div class="card-block">
 							<h2 class="card-title">我的個人檔案</a></h2>
               <br>
-              <h4 class="card-text">暱稱：David</h4>
+              <h4 class="card-text"><%= model[i].name %></h4>
               <br>
-              <h4 class="card-text">Email:David10112000@gmail.com</h4>
+              <h4 class="card-text">email:<%= model[i].email %></h4>
             <br>
             <h4 class="card-text">飼養的寵物：狗</h4>
             <br>
-            <h4 class="card-text">生日：2000/06/14</h4>
+            <h4 class="card-text"><%= model[i].birthday %></h4>
           
-            
+<%}%>            
               <h4 class="card-text"></h4>
             	<div class="metafooter">
 								<div class="wrapfooter">
