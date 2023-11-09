@@ -171,7 +171,7 @@
 	</section>
 	<!-- End Featured
 	================================================== -->
-	<!-- Begin List Posts
+<!-- Begin List Posts
 	================================================== -->
 
 	<section class="recent-posts">
@@ -179,11 +179,12 @@
 		<div class="card-columns listrecent">
 			<% for (let i=0;i<model.length; i++){ %>
 				<div class="card">
-					<a href="lostpost">
-						<img class="img-fluid" src="//photo/<%= model[i].photo %>" alt="" width="400" height="500">
+					<a href="/art_edit/edit/<%= model[i].id %>">
+						<img class="img-fluid" src="/photo/<%= model[i].photo %>" alt="" width="400" height="500">
 					</a>
 					<div class="card-block">
-						<h2 class="card-title"><a href="lostpost"><%= model[i].title %></a></h2><!-- 顯示標題-->
+						<h2 class="card-title"><a href="/art_edit/edit/<%= model[i].id %>"><%= model[i].title %></a></h2><!-- 顯示標題-->
+						
 						<div class="metafooter">
 							<div class="wrapfooter">
 								<span class="meta-footer-thumb">
@@ -199,8 +200,6 @@
 					</div>
 				</div>
 			<%}%>
-			
-
 			
 			
 		</div>

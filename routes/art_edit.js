@@ -38,7 +38,15 @@ router.get('/edit/:id', function (req, res, next) {
     ).exec()
       .then(function (model) {
           console.log('art_edit, model length == ' + model.length);
-          res.render('cookpost', { model: model });
+          var can_edit = false;
+          console.log('art_edit, req.session.email = ' + req.session.email);
+          console.log('art_edit, model.email = ' + model[0].email);
+          if(req.session.email==model[0].email){
+            can_edit=true;
+          }
+          console.log('art_edit, can_edit = ' + can_edit);
+          res.render('cookpost', { model: model,can_edit: can_edit});
+        
       })
       .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
         console.log(err);

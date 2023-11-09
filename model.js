@@ -10,7 +10,8 @@ var UserSchema = new Schema({//使用者資料（註冊）
     email: String,//帳號
     password: String,//密碼
     birthday: Date,   //生日
-    name:String //使用者名稱
+    name:String, //使用者名稱
+    introduction:String, //自介
 });
 var CategorySchema = new Schema({//主題分類資料表
     Cate:Number, //類別編號(型態不確定)
@@ -26,6 +27,7 @@ var ArticleSchema = new Schema({//新增文章
     updatedate:{ type : Date, default: Date.now },
     photo: String
 });
+
 // Compile model from schema 物件名
 var SomeModel = mongoose.model('SomeModel', SomeModelSchema ); //test
 var UserModel = mongoose.model('UserModel', UserSchema);
