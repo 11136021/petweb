@@ -39,7 +39,9 @@
             resize: none;
         }
  </style>
- 
+  <script>
+	     
+  </script>
 <!-- 下拉選單外掛 end-->
  </head>
   <body>
@@ -96,8 +98,7 @@
 					  </li>
 	
 			   </div>
-			</div>
-		</nav>
+			</nav>
 	   
 		 <!-- navbar end -->
 <!-- Begin Site Title
@@ -110,8 +111,9 @@
 		<p class="lead">
 			寵物友善餐廳推薦，和毛孩們一起用餐！
 		</p>
-	</div>
-</div>
+		<p class="lead">
+			
+		</p>
 <!-- End Site Title
 ================================================== -->
 <div class="box-user">
@@ -164,14 +166,14 @@
 		</html>
 			
 		</h2>
-	</section>
+	</div><section class="recent-posts">
 	<!-- End Featured
 	================================================== -->
 
 <!-- Begin List Posts
 	================================================== -->
 
-	<section class="recent-posts">
+	
 	
 		<div class="card-columns listrecent">
 			<% for (let i=0;i<model.length; i++){ %>
@@ -198,11 +200,12 @@
 				</div>
 			<%}%>
 			
-			
+		</div>	
 		</div>
 		</section>
 		<!-- End List Posts
 		================================================== -->
+	</section>
 	<!-- Begin Footer
 	================================================== -->
     <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
@@ -275,5 +278,6 @@
 	  });
    }); 
       </script>
+</div>
   </body>
   </html>

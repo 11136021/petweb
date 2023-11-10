@@ -93,7 +93,7 @@
 							<li><a class="dropdown-item" href="user_logout">登出</a></li>
 						  </ul>
 					  </li>
-			   </div>
+			   
 			</div>
 		</nav>
 	   
@@ -108,8 +108,7 @@
 		<p class="lead">
 			衝物友善住宿，帶著寵物去旅行～
 		</p>
-	</div>
-</div>
+
 <!-- End Site Title
 ================================================== -->
 <div class="box-user">
@@ -162,13 +161,13 @@
 		</html>
 			
 		</h2>
-	</section>
+	</div><section class="recent-posts">
 	<!-- End Featured
 	================================================== -->
 <!-- Begin List Posts
 	================================================== -->
 
-	<section class="recent-posts">
+	
 	
 		<div class="card-columns listrecent">
 			<% for (let i=0;i<model.length; i++){ %>
@@ -195,7 +194,7 @@
 				</div>
 			<%}%>
 			
-			
+		</div>
 		</div>
 		</section>
 		<!-- End List Posts
@@ -271,5 +270,6 @@
 	  });
    }); 
       </script>
+</div>
   </body>
   </html>

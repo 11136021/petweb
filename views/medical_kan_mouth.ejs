@@ -36,14 +36,7 @@
   
   </style>
   <script>
-	  $(document).ready(function(){
-		  $(".dropdown").hover(function(){
-			  var dropdownMenu = $(this).children(".dropdown-menu");
-			  if(dropdownMenu.is(":visible")){
-				  dropdownMenu.parent().toggleClass("open");
-			  }
-		  });
-	  });     
+	 
 	  </script> 
  <!-- 下拉選單外掛 end-->
 </head>
@@ -99,7 +92,7 @@
 							<li><a class="dropdown-item" href="user_logout">登出</a></li>
 						  </ul>
 					  </li>
-			   </div>
+			   
 			</div>
 		</nav>
 	   
@@ -107,15 +100,16 @@
 <!-- Begin Site Title
 ================================================== -->
 <div class="container-fluid tm-container-content tm-mt-60">
-
 <div class="container">
 	<div class="mainheading">
 		<h1 class="sitetitle">口腔</h1>
 		<p class="lead">
 			維持口腔清晰，牙齒健康～
 		</p>
-	</div>
-</div>
+		<p class="lead">
+			
+		</p>
+
 <!-- End Site Title
 ================================================== -->
 <div class="box-user">
@@ -169,25 +163,14 @@
 		</html>
 			
 		</h2>
-		<!-- begin post -->
-		<div class="card">
-			<div class="row">
-				<div class="col-md-5 wrapthumbnail">
-					<a href="post">
-						<div class="thumbnail" style="background-image:url(img/demopic/001.jpg);">
-						</div>
-					</a>
-				</div>
+		
+	</div><section class="recent-posts">
 				
-				
-	</section>
+		
 	<!-- End Featured
 	================================================== -->
 		<!-- Begin List Posts
 	================================================== -->
-
-	<section class="recent-posts">
-	
 		<div class="card-columns listrecent">
 			<% for (let i=0;i<model.length; i++){ %>
 				<div class="card">
@@ -213,12 +196,12 @@
 				</div>
 			<%}%>
 			
-			
+		</div>	
 		</div>
 		</section>
 		<!-- End List Posts
 		================================================== -->
-
+		</section>
 
 	
 
