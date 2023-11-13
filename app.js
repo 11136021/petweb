@@ -36,6 +36,7 @@ var about_us = require('./routes/about_us');
 var author = require('./routes/author');
 var forge_html = require('./routes/forge_html');
 var logout = require('./routes/logout');
+var photo_chg = require('./routes/photo_chg');
 
 
 var app = express();
@@ -96,6 +97,7 @@ app.use('/about_us', about_us);
 app.use('/author', author);
 app.use('/forge_html', forge_html);
 app.use('/logout',logout);
+app.use('/photo_chg',photo_chg);
 
 
 // catch 404 and forward to error handler
