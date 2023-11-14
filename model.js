@@ -12,6 +12,7 @@ var UserSchema = new Schema({//使用者資料（註冊）
     birthday: Date,   //生日
     name:String, //使用者名稱
     introduction:String, //自介
+    photo: String //頭貼
 });
 var CategorySchema = new Schema({//主題分類資料表
     Cate:Number, //類別編號(型態不確定)
