@@ -47,52 +47,8 @@
      </script>
  
        <!-- navbar-->
-     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-           <div class="nav">
-            <a class="navbar-brand" href="/main">
-                <i class="fas fa-film mr-2"></i>
-               Pet伴，陪伴
-            </a>
-           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button> 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+       <%- include('navbar/navbar.ejs') %>
 
-               <li class="nav-item dropdown">
-                   <a class="nav-link"  href="/main" role="button" aria-expanded="false">主頁</a>
-                   
-                 </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link" href="/cook_kan_cooked" role="button" aria-expanded="false">食譜</a>
-                  
-                 </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link"  href="/medical_kan_mouth" role="button" aria-expanded="false">醫療</a>
-                   
-                 </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link"  href="/lost_picked" role="button" aria-expanded="false">走失</a>
-                   
-                 </li>
-                 <li class="nav-item dropdown">
-                   <a class="nav-link"  href="/tra_restaurant" role="button" aria-expanded="false">旅遊</a>
-                   
-                 </li>
-
-                 <li class="nav-item dropdown">
-                    <a class="nav-link"   role="button" aria-expanded="false">個人檔案</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
-                        <li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
-                        <li><a class="dropdown-item" href="art_edit">編輯貼文</a></li>
-                        <li><a class="dropdown-item" href="user_logout">登出</a></li>
-                      </ul>
-                  </li>
-
-           </div>
-        </div>
-    </nav>
  </head>
 
 
@@ -144,14 +100,8 @@
        
      <!-- Begin Footer
      ================================================== -->
-     <div class="footer">
-         <p class="pull-left">
-             Designed by &copy; Pet伴，陪伴
-         </p>
-         
-         <div class="clearfix">
-         </div>
-     </div>
+     <%- include('navbar/footer.ejs') %>
+
      <!-- End Footer
      ================================================== -->
  

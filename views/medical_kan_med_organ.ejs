@@ -54,51 +54,8 @@
   
       </div>
           <!-- navbar-->
-		  <nav class="navbar navbar-expand-lg">
-			<div class="container-fluid">
-			   <div class="nav">
-				<a class="navbar-brand" href="/main">
-					<i class="fas fa-film mr-2"></i>
-				   Pet伴，陪伴
-				</a>
-			   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
-				</button> 
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-	
-				   <li class="nav-item dropdown">
-					   <a class="nav-link"  href="/main" role="button" aria-expanded="false">主頁</a>
-					   
-					 </li>
-					 <li class="nav-item dropdown">
-					   <a class="nav-link" href="/cook_kan_cooked" role="button" aria-expanded="false">食譜</a>
-					  
-					 </li>
-					 <li class="nav-item dropdown">
-					   <a class="nav-link"  href="/medical_kan_mouth" role="button" aria-expanded="false">醫療</a>
-					   
-					 </li>
-					 <li class="nav-item dropdown">
-					   <a class="nav-link"  href="/lost_picked" role="button" aria-expanded="false">走失</a>
-					   
-					 </li>
-					 <li class="nav-item dropdown">
-					   <a class="nav-link"  href="/tra_restaurant" role="button" aria-expanded="false">旅遊</a>
-					   
-					 </li>
-	
-					 <li class="nav-item dropdown">
-						<a class="nav-link"   role="button" aria-expanded="false">個人檔案</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="profile">我的個人檔案</a></li>
-							<li><a class="dropdown-item" href="pro_edit">編輯個人檔案</a></li>
-							<li><a class="dropdown-item" href="art_edit">編輯貼文</a></li>
-							<li><a class="dropdown-item" href="user_logout">登出</a></li>
-						  </ul>
-					  </li>
-			   
-			</div>
-		</nav>
+		  <%- include('navbar/navbar.ejs') %>
+
 	   
 		 <!-- navbar end -->
 <!-- Begin Site Title
@@ -208,51 +165,8 @@
 		================================================== -->
 		</section>
 	<!-- Begin Footer-->
-	<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
-        <div class="container-fluid tm-container-small">
-           <div class="row">
-                <!--<div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">關於我們</h3>
-                    <p> “等待與陪伴，是毛孩對人的愛。” </br>
-                        “我以為我養了一條狗，後來我發現，我多了一個家人。” </br>
-                        “毛孩，是你人生中的一部分。而你，卻是牠的一辈子。”</br></br>
-                        「Pet伴，陪伴」用生活中各種角度去陪伴毛小孩的生活，透過寵物專屬論壇，互相討論、分享並且了解毛小孩，讓我們因此感受到多種「愛」與「幸福」的人生。
-                        </p>
-                </div>
-            -->
-            <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                <h3 class="tm-text-primary mb-4 tm-footer-title">關於我們</h3>
-                <ul class="tm-footer-links pl-0">
-                    <li>“等待與陪伴，是毛孩對人的愛。” </li>
-                    <li>“我以為我養了一條狗，後來我發現，我多了一個家人。” </li>
-                    <li>毛孩，是你人生中的一部分。而你，卻是牠的一輩子。” </li>
-                    <br>
-                    <li>「Pet伴，陪伴」用生活中各種角度去陪伴毛小孩的生活，透過寵物專屬論壇，互相討論、分享並且了解毛小孩，讓我們因此感受到多種「愛」與「幸福」的人生。</li>
-            </div>
+	<%- include('navbar/footer.ejs') %>
 
-
-                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                   <h3 class="tm-text-primary mb-4 tm-footer-title">聯繫資訊</h3>
-                   <ul class="tm-footer-links pl-0">
-                       <li><a href="#">02-33222777</a></li>
-                       <li><a href="mailto:petweb21233537@gmail.com">petweb21233537@gmail.com</a></li>
-                       <li><a href="https://goo.gl/maps/MRCrfD6nzR4BMeAo6">100臺北市中正區濟南路一段321號</a></li>
-                       <br/>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.769469250987!2d121.52342931508505!3d25.04189634412865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1677909617368!5m2!1szh-TW!2stw" width="300" height="200"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                   </ul>
-                </div>
-           </div>
-       </div>
-       <div class="row">
-           <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                    <!-- 可修改Copyright 2020 Catalog-Z Company. All rights reserved.-->
-           </div> <!-- 可修改 -->
-                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
-                    Designed by <a href="＃" class="tm-text-gray" rel="sponsored" target="_parent">Pet伴，陪伴</a>
-                </div> <!-- 可修改 -->
-            </div>
-        </div>
-</footer>
 	<!-- End Footer -->
 
       <script src="https://code.jquery.com/jquery-2.2.4.js"></script>

@@ -1,62 +1,49 @@
- <!-- 使用者登出後畫面-->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
-     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/all.min.css">
-     <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
- <!--
+<!-- 使用者登出後畫面-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet伴，陪伴</title> <!-- 改 （主題名）-->
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
+    <!--
      m
  TemplateMo 556 Catalog-Z
  
  https://templatemo.com/tm-556-catalog-z
  
  -->
- </head>
- <body>
-     <!-- Page Loader -->
-     <div id="loader-wrapper">
-         <div id="loader"></div>
- 
-         <div class="loader-section section-left"></div>
-         <div class="loader-section section-right"></div>
- 
-     </div>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
 
 
- <!-- navbar-->
- <nav class="navbar navbar-expand-lg">
-    <div class="nav">
-        <a class="navbar-brand" href="/">
-            <i class="fas fa-film mr-2"></i>
-            Pet伴，陪伴
-        </a>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link"  href="/user_login" role="button" aria-expanded="false">登入</a>
-                    </div>
-                    <div class="nav-item dropdown"></div>
-                        <a class="nav-link"  href="/user_add_form" role="button" aria-expanded="false">註冊</a>
-                    </div>      
-                   
-                </div>
-            </div>
-        </nav>
-            <h1 >註冊失敗，請重新註冊</h1>
-      
-       
-        
+    <!-- navbar-->
+    <%- include('navbar/navbar1') %>
+        <div>
+            <h1>註冊失敗，請重新註冊</h1>
 
-    <!-- loading轉圈的畫面-->
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-     <script src="/javascript/js/plugins.js"></script>
-     <script>
-        $(window).on("load", function() {
-            $('body').addClass('loaded');
-        });
-    </script>
+            <!-- loading轉圈的畫面-->
+            <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+            <script src="/javascript/js/plugins.js"></script>
+            <script>
+                $(window).on("load", function () {
+                    $('body').addClass('loaded');
+                });
+            </script>
+            <DIV>
+                <%- include('navbar/Footer') %>
+            </DIV>
+        </div>
+</body>
