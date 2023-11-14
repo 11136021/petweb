@@ -1,4 +1,4 @@
-<!-- 使用者登出後畫面-->
+<!-- 使用者登入前主畫面-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,43 +9,171 @@
     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/css/all.min.css">
     <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
-    <!--
-     m
- TemplateMo 556 Catalog-Z
- 
- https://templatemo.com/tm-556-catalog-z
- 
- -->
+    <!-- navbar 下拉選單樣式-->
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+            background-color: #DBC89B;
+        }
+
+        .dropdown-item {
+            background-color: #DBC89B;
+            color: #FFFEFB;
+        }
+
+        .collapse {
+            color: #A88E4F;
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- Page Loader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
+    <div id="body">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
 
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
 
-    </div>
-
-
-    <!-- navbar-->
-    <%- include('navbar/navbar1') %>
-        <div>
-            <div class="container-fluid tm-container-content tm-mt-60">
-            <h1>註冊失敗，請重新註冊</h1>
-
-            <!-- loading轉圈的畫面-->
-            <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-            <script src="/javascript/js/plugins.js"></script>
-            <script>
-                $(window).on("load", function () {
-                    $('body').addClass('loaded');
-                });
-            </script>
-            <DIV>
-                <%- include('navbar/Footer') %>
-            </DIV>
         </div>
+        <!-- navbar-->
+        <%- include('navbar/navbar1') %>
+
+
+        
+
+
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary">
+                註冊失敗，請按下方按鈕重新註冊！
+            </h2>
+            <!-- <div class="col-6 d-flex justify-content-end align-items-center">
+                 <form action="" class="tm-text-primary">
+                     Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 200
+                 </form>
+             </div>-->
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/new06.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>登入</h2>
+                        <a href="/user_login">View more</a> <!-- 不知道 View more在哪裏-->
+                    </figcaption>
+                </figure>
+                <!-- <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                     <span>16,100 views</span>
+                 </div>-->
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/new07.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>註冊</h2>
+                        <a href="/user_add_form">View more</a> <!-- 不知道 View more在哪裏-->
+                    </figcaption>
+                </figure>
+                <!--<div class="d-flex justify-content-between tm-text-gray">
+                     <span class="tm-text-gray-light">14 Oct 2020</span>
+                     <span>16,100 views</span>
+                 </div>-->
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/new05.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>關於我們</h2>
+                        <a href="/about_us">View more</a> <!-- 不知道 View more在哪裏-->
+                    </figcaption>
+                </figure>
+                <!--<div class="d-flex justify-content-between tm-text-gray">
+                     <span class="tm-text-gray-light">12 Oct 2020</span>
+                     <span>12,460 views</span>
+                 </div>-->
+            </div>
+            <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                 <figure class="effect-ming tm-video-item">
+                     <img src="img/img-06.jpg" alt="Image" class="img-fluid">
+                     <figcaption class="d-flex align-items-center justify-content-center">
+                         <h2>揪團購</h2>
+                         <a href="photo-detail.html">View more</a>  
+                     </figcaption>                    
+                 </figure>
+                 <div class="d-flex justify-content-between tm-text-gray">
+                     <span class="tm-text-gray-light">10 Oct 2020</span>
+                     <span>11,402 views</span>
+                 </div>
+             </div>
+             
+             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                 <figure class="effect-ming tm-video-item">
+                     <img src="img/img-01.jpg" alt="Image" class="img-fluid">
+                     <figcaption class="d-flex align-items-center justify-content-center">
+                         <h2>旅遊</h2>
+                         <a href="＃">View more</a> 
+                     </figcaption>                    
+                 </figure>
+                 <div class="d-flex justify-content-between tm-text-gray">
+                     <span class="tm-text-gray-light">24 Sep 2020</span>
+                     <span>16,008 views</span>
+                 </div>
+             </div>  -->
+        </div> <!-- row -->
+        <!-- <div class="row tm-mb-90">
+             <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
+                 <a href="#" class="btn btn-primary tm-btn-prev mb-2 disabled">Previous</a>
+                 <div class="tm-paging d-flex">
+                     <a href="#" class="active tm-paging-link">1</a>
+                     <a href="#" class="tm-paging-link">2</a>
+                     <a href="#" class="tm-paging-link">3</a>
+                     <a href="#" class="tm-paging-link">4</a>
+                 </div>
+                 <a href="javascript:void(0);" class="btn btn-primary tm-btn-next">Next Page</a>
+             </div>            
+         </div>
+     </div>--> <!-- container-fluid, tm-container-content -->
+
+
+     <%- include('navbar/Footer') %>
     </div>
+    </div>
+    
+    </div>
+    </div>
+    
+
+        <!-- loading轉圈的畫面-->
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="/javascript/js/plugins.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script>
+            $(window).on("load", function () {
+                $('body').addClass('loaded');
+            });
+        </script>
+        <!--navbar 下拉選單外掛-->
+        <script>
+            $(document).ready(function () {
+                $(".dropdown").hover(function () {
+                    var dropdownMenu = $(this).children(".dropdown-menu");
+                    if (dropdownMenu.is(":visible")) {
+                        dropdownMenu.parent().toggleClass("open");
+                    }
+                });
+            });     
+        </script>
 </body>
+
+</html>
