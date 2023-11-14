@@ -1,135 +1,149 @@
- <!-- 貼文編輯-->
- <!DOCTYPE html>
- <html lang="en">
- <head>
- <meta charset="utf-8">
- 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pet伴，陪伴</title>  <!-- 改 （主題名）-->
- 
- <!-- Bootstrap core CSS 內文的css連結 (外匡？)-->
- <link rel="stylesheet" href="/stylesheets/assets/bootstrap.min.css">
- <!-- Fonts -->
- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
- <!-- Custom styles for this template內文的css連結(外匡？) -->
- <link rel="stylesheet" href="/stylesheets/assets/mediumish.css" >
- <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
- <link rel="stylesheet" href="/stylesheets/css/all.min.css">
- <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
- <!-- 下拉選單外掛 -->
- <style>
-     .dropdown:hover .dropdown-menu{
-         display: block;
-     }
-     .dropdown-menu{
-         margin-top: 0;
-         background-color: #DBC89B;
-     }
-     .dropdown-item{
-         background-color: #DBC89B;
-         color: #FFFEFB;
-     }
-     .collapse {
-         color: #A88E4F;
-     }
- 
- </style>
- <script>
-     $(document).ready(function(){
-         $(".dropdown").hover(function(){
-             var dropdownMenu = $(this).children(".dropdown-menu");
-             if(dropdownMenu.is(":visible")){
-                 dropdownMenu.parent().toggleClass("open");
-             }
-         });
-     });     
-     </script>
- 
-       <!-- navbar-->
-       <%- include('navbar/navbar.ejs') %>
+<!-- 貼文編輯-->
+<!DOCTYPE html>
+<html lang="en">
 
- </head>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet伴，陪伴</title> <!-- 改 （主題名）-->
+
+    <!-- Bootstrap core CSS 內文的css連結 (外匡？)-->
+    <link rel="stylesheet" href="/stylesheets/assets/bootstrap.min.css">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!-- Custom styles for this template內文的css連結(外匡？) -->
+    <link rel="stylesheet" href="/stylesheets/assets/mediumish.css">
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/css/templatemo-style.css">
+    <!-- 下拉選單外掛 -->
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+            background-color: #DBC89B;
+        }
+
+        .dropdown-item {
+            background-color: #DBC89B;
+            color: #FFFEFB;
+        }
+
+        .collapse {
+            color: #A88E4F;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(function () {
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });     
+    </script>
+
+    <!-- navbar-->
+    <%- include('navbar/navbar.ejs') %>
+
+</head>
 
 
 <!-- Begin Top article edit
 ================================================== -->
 
-    
 
-    
-	<div class="graybg authorpage">
-        <div class="container"> 
-          <div class="section-title">
-        <h2><span>編輯貼文</span></h2>
-    </div>          
-           <% for (let i=0;i<model.length; i++){ %>
-            <div class="listrecent listrelated">
-             
+
+<div class="container-fluid tm-container-content tm-mt-60">
+    <div class="graybg authorpage">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>編輯貼文</span></h2>
+            </div>
+            <% for (let i=0;i<model.length; i++){ %>
+                <div class="listrecent listrelated">
+
                     <!-- 食譜回圈一 -->
                     <div class="authorpostbox">
                         <div class="card">
                             <a href="author">
-                            <img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
+                                <img class="img-fluid img-thumb" src="assets/img/demopic/8.jpg" alt="">
                             </a>
                             <div class="card-block">
-                                <h2 class="card-title"><a href="art_edit/edit/<%= model[i].id %>"><%= model[i].title %></a></h2>
-                                        <div class="metafooter">
+                                <h2 class="card-title"><a href="art_edit/edit/<%= model[i].id %>">
+                                        <%= model[i].title %>
+                                    </a></h2>
+                                <div class="metafooter">
                                     <div class="wrapfooter">
                                         <span class="meta-footer-thumb">
-                                        <span class="post-date"><%= model[i].updatedate %></span></span><span class="post-read"></span>
+                                            <span class="post-date">
+                                                <%= model[i].updatedate %>
+                                            </span></span><span class="post-read"></span>
                                         </span>
-                                        <span class="post-read-more"><a href="art_edit/delete/<%= model[i].id %>" title="Read Story" onclick="return checkIsDelete()">刪除</a></span> 				<!-- 加上刪除功能-->
+                                        <span class="post-read-more"><a href="art_edit/delete/<%= model[i].id %>"
+                                                title="Read Story" onclick="return checkIsDelete()">刪除</a></span>
+                                        <!-- 加上刪除功能-->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end post -->
-            </div>
+                </div>
         </div>
+       
     </div>
-            <%}%>
-            
-            
-        </div>
-        </section>
-        <!-- article edit Posts
+    <%}%>
+
+    <%- include('navbar/footer.ejs') %>
+</div>
+</section>
+<!-- article edit Posts
         ================================================== -->
 
-       
-     <!-- Begin Footer
-     ================================================== -->
-     <%- include('navbar/footer.ejs') %>
 
-     <!-- End Footer
+<!-- Begin Footer
      ================================================== -->
- 
- </div>
- <!-- /.container -->
- 
- <!-- Bootstrap core JavaScript
-     ================================================== -->
- <!-- Placed at the end of the document so the pages load faster -->
- <script src="assets/js/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
- <script src="assets/js/bootstrap.min.js"></script>
- <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
- <script src="/javascript/js/plugins.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script>
-         $(window).on("load", function() {
-             $('body').addClass('loaded');
-         });
 
-         function checkIsDelete(){
+
+    <!-- End Footer
+     ================================================== -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="/javascript/js/plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        $(window).on("load", function () {
+            $('body').addClass('loaded');
+        });
+
+        function checkIsDelete() {
             if (confirm("確定是否要刪除?")) {
                 return true;
             }
             return false;
-         }
-     </script>
- </body>
- </html>
- 
+        }
+    </script>
+    </body>
+
+</html>
