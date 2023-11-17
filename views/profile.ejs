@@ -135,14 +135,16 @@
                                     </div>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- end post -->
+                    
                 </div>
             </div>
-            <%- include('navbar/footer.ejs') %>
         </div>
-        <!-- End Author Posts
+        <%- include('navbar/footer.ejs') %>
+
+            <!-- End Author Posts
 ================================================== -->
     </div>
     <!-- Modal 的 HTML 代碼 -->
@@ -156,48 +158,52 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <!-- 大頭貼 -->
-                    <div class="form-group">
-                        <label for="profilePicture">大頭貼：</label>
-                        <input type="file" class="form-control" id="profilePicture" name="profilePicture">
-                        <!-- 如果需要預覽，可以在這裡加上預覽的元素 -->
-                    </div>
+                <form action="" method="post" encType="multipart/form-data"> <!-- 放入按下確認後會到的頁面 -->
 
-                    <!-- 暱稱 -->
-                    <div class="form-group">
-                        <label for="nickname">暱稱：</label>
-                        <input type="text" class="form-control" id="nickname" name="nickname">
-                    </div>
+                    <div class="modal-body">
+                        <!-- 大頭貼 -->
+                        <div class="form-group">
+                            <label for="profilePicture">大頭貼：</label>
+                            <input type="file" class="form-control" id="profilePicture" name="profilePicture">
+                            <!-- 如果需要預覽，可以在這裡加上預覽的元素 -->
+                        </div>
 
-                    <!-- 自介 -->
-                    <div class="form-group">
-                        <label for="introduction">自介：</label>
-                        <textarea class="form-control" id="introduction" name="introduction"></textarea>
-                    </div>
+                        <!-- 暱稱 -->
+                        <div class="form-group">
+                            <label for="nickname">暱稱：</label>
+                            <input type="text" class="form-control" id="nickname" name="nickname">
+                        </div>
 
-                    <!-- 飼養的寵物 -->
-                    <div class="form-group">
-                        <label for="pets">飼養的寵物：</label>
-                        <input type="text" class="form-control" id="pets" name="pets">
-                    </div>
+                        <!-- 自介 -->
+                        <div class="form-group">
+                            <label for="introduction">自介：</label>
+                            <textarea class="form-control" id="introduction" name="introduction"></textarea>
+                        </div>
 
-                    <!-- email -->
-                    <div class="form-group">
-                        <label for="email">email：</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
+                        <!-- 飼養的寵物 -->
+                        <div class="form-group">
+                            <label for="pets">飼養的寵物：</label>
+                            <input type="text" class="form-control" id="pets" name="pets">
+                        </div>
 
-                    <!-- 生日 -->
-                    <div class="form-group">
-                        <label for="birthday">生日：</label>
-                        <input type="text" class="form-control" id="birthday" name="birthday">
+                        <!-- email -->
+                        <div class="form-group">
+                            <label for="email">email：</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+
+                        <!-- 生日 -->
+                        <div class="form-group">
+                            <label for="birthday">生日：</label>
+                            <input type="text" class="form-control" id="birthday" name="birthday">
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                    <!-- 如果需要的話，你可以在這裡放上提交表單的按鈕 -->
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        <!-- 如果需要的話，你可以在這裡放上提交表單的按鈕 -->
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
