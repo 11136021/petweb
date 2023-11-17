@@ -11,6 +11,7 @@ var UserSchema = new Schema({//使用者資料（註冊）
     password: String,//密碼
     birthday: Date,   //生日
     name:String, //使用者名稱
+    petname:String,//寵物名稱
     introduction:String, //自介
     photo: String //頭貼
 });
