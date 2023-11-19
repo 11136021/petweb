@@ -29,7 +29,7 @@ router.get('/edit/:id', function (req, res, next) {
   if (req.session.email) {
     var email = req.session.email;
 
-    // 透過id來抓使用者選取的文章
+    // 透過id來抓使用者選取的貼文
     var id = req.params.id;
     console.log(id)
 
@@ -105,7 +105,7 @@ router.get('/delete/:id', function (req, res, next) {
   if (req.session.email) {
     var email = req.session.email;
 
-    // 透過id來抓使用者選取的文章
+    // 透過id來抓使用者選取的貼文
     var id = req.params.id;
     console.log(id)
 
