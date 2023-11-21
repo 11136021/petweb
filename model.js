@@ -13,7 +13,8 @@ var UserSchema = new Schema({//使用者資料（註冊）
     name:String, //使用者名稱
     petname:String,//寵物名稱
     introduction:String, //自介
-    photo: String //頭貼
+    photo: String ,//頭貼
+    nickname: String,
 });
 var CategorySchema = new Schema({//主題分類資料表
     Cate:Number, //類別編號(型態不確定)

@@ -1,19 +1,19 @@
 var express = require('express');
 var router = express.Router();
 const { UserModel } = require('../model.js');
+const path = require('path');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   if (req.session.email) {
     var email = req.session.email;
     
-
     UserModel.find( //從資料庫中抓取符合條件的資料
       { email: email }
     ).exec()
       .then(function (model) {
-        
           console.log('profile, model length == ' + model.length);
+          console.log('model: ' + model[0]);
           res.render('profile', { model: model });
         
       })
@@ -53,21 +53,39 @@ router.post('/',async function(req, res, next) {
       //res.send('File uploaded!');
     });
     
+    UserModel.find( //從資料庫中抓取符合條件的資料
+    { email: email }
+  ).exec()
+    .then(function (model) {
+        console.log('post profile, model length == ' + model.length);
+        console.log('post model: ' + model[0]);
+        model[0].birthday = birthday;
+        model[0].nickname = nickname;
+        model[0].save();
+        res.render('profile', { model: model });
+      
+    })
+    .catch(function (err) { //觸發例外，先不管，直接跳登入失敗
+      console.log(err);
+      res.redirect("/user_addFail");
+    })
     
     // 建立一個新資料物件
-    const newData = new ArticleModel({
+    /*
+    const newData = new UserModel({
       email: email,
-      title: title,
-      category: category,
-      subcate:'profile',
-      content: content,
-      photo:sampleFile.name
+      birthday: birthday,   //生日
+      petname: petname,//寵物名稱
+      introduction: introduction, //自介
+      photo: photo ,//頭貼
+      nickname: nickname,
     });
 
     newData.save()
     res.redirect('/profile') 
+    */
   }else{
-      res.redirect('/profile') //session
+      res.redirect('/user_login') //session
   }
 
   
