@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
 );
 
 
-router.post('/',async function(req, res, next) {
+router.post('/',function(req, res, next) {
 
   if(req.session.email){
     var email = req.session.email;
@@ -63,8 +63,11 @@ router.post('/',async function(req, res, next) {
       content: content
     });
 
-    newData.save()
-    res.redirect('/tra_day') 
+    newData.save().then(function(data){
+    res.redirect('/tra_day');
+
+    })
+    
     }else{
       res.redirect('/user_login') //session
     }

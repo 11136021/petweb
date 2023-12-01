@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
   res.redirect("/user_login");
 }
 });
-router.post('/',async function(req, res, next) {
+router.post('/',function(req, res, next) {
 
   if(req.session.email){
     var email = req.session.email;
@@ -62,8 +62,10 @@ router.post('/',async function(req, res, next) {
       photo:sampleFile.name
     });
 
-    newData.save()
-    res.redirect('/medical_kan_med_skin') 
+    newData.save().then(function(data){
+    res.redirect('/medical_kan_med_skin');
+  })
+  
     }else{
       res.redirect('/user_login') //session
     }

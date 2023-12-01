@@ -64,8 +64,10 @@ router.post('/',async function(req, res, next) {
       photo:sampleFile.name
     });
 
-    newData.save()
-    res.redirect('/lost_picked') 
+    newData.save().then(function(data){
+    res.redirect('/lost_picked');
+    })
+    
     }else{
       res.redirect('/user_login') //session
     }

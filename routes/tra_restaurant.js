@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
 );
 
 
-router.post('/',async function(req, res, next) {
+router.post('/',function(req, res, next) {
 
   if(req.session.email){
     var email = req.session.email;
@@ -64,8 +64,10 @@ router.post('/',async function(req, res, next) {
     });
 
 
-    newData.save()
-    res.redirect('/tra_restaurant') 
+    newData.save().then(function(data){
+    res.redirect('/tra_restaurant');
+  })
+
     }else{
       res.redirect('/user_login') //session
     }
