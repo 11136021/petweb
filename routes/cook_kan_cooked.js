@@ -26,7 +26,7 @@ router.get('/', function (req, res, next) {
 }});
 
 
-router.post('/',async function(req, res, next) {
+router.post('/', function(req, res, next) {
 
   if(req.session.email){
     var email = req.session.email;
@@ -63,8 +63,10 @@ router.post('/',async function(req, res, next) {
       photo:sampleFile.name
     });
 
-    newData.save()
-    res.redirect('/cook_kan_cooked') 
+    newData.save().then(function(data){
+      res.redirect('/cook_kan_cooked');
+    })
+     
   }else{
       res.redirect('/user_login') //session
   }
